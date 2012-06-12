@@ -652,38 +652,37 @@ footer #bottomBlackBar a.canLink:active {
   margin: 0.8em 0;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+#mainContent h1,
+#mainContent h2 {
+  margin: 0.5em 0;
+  font-weight: normal;
+}
+#mainContent h2,
+#mainContent h3 {
+  color: #666666;
 }
 #mainContent h1 {
   font-size: 1.714em;
-  font-weight: normal;
   color: #1c467a;
   border-bottom: 1px dashed #ccc;
   padding-bottom: 4px;
-  height: auto;
-  letter-spacing: -0.02em;
 }
 #mainContent h2 {
   font-size: 1.571em;
-  font-weight: normal;
-  color: #666;
-  letter-spacing: -0.02em;
 }
 #mainContent h3 {
   font-size: 1.286em;
-  color: #666;
-  letter-spacing: -0.02em;
 }
 #mainContent h4 {
   font-size: 1.143em;
-  color: #333;
 }
 #mainContent h5 {
   font-size: 1.071em;
-  color: #333;
 }
 #mainContent h6 {
   font-size: 1em;
-  color: #333;
 }
 #mainContent a {
   color: inherit;
@@ -978,9 +977,15 @@ footer #bottomBlackBar a.canLink:active {
 }
 #mainContent #breadcrumbs {
   width: 110%;
-  margin-left: -5%;
+  margin-left: -3em;
   border-bottom: 1px dashed #ccc;
   margin-bottom: 1em;
+}
+@media  screen and (max-width: 620px) {
+  #mainContent #breadcrumbs {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 #mainContent #breadcrumbs ol {
   padding: 0;
@@ -998,11 +1003,11 @@ footer #bottomBlackBar a.canLink:active {
   float: left;
   margin: 0 5px 0 0;
   padding: 0 0 3px 0px;
-  line-height: 18px;
+  line-height: 20px;
 }
 #mainContent #breadcrumbs li a {
   background: url(../img/breadcrumb.png) left 45% no-repeat;
-  padding: 0 0 3px 11px;
+  padding: 0 1px 3px 12px;
   font-size: 0.925em;
   display: block;
   color: #15598f;
@@ -1048,10 +1053,6 @@ footer #bottomBlackBar a.canLink:active {
   font-size: 0.75em;
   padding: 8px;
   background: #eee;
-}
-#mainContent .tableScroller {
-  width: 100%;
-  overflow-x: auto;
 }
 #mainContent .shadow {
   -moz-box-shadow: 2px 2px 4px #333333;
@@ -1100,6 +1101,7 @@ footer #bottomBlackBar a.canLink:active {
   max-width: 1140px;
   display: block;
   margin: 16px auto 0;
+  border: 1px solid #AAA;
 }
 #mainContent blockquote p {
   width: 100%;
@@ -1142,7 +1144,7 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent .box {
   border: 1px solid #AAA;
   margin: 1em auto;
-  max-width: 720px;
+  width: 100%;
 }
 #mainContent figure header,
 #mainContent .twoColChart header,
@@ -1184,7 +1186,7 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent .box {
   margin: 10px auto;
   overflow: hidden;
-  border: 1px solid #CCC;
+  border: 1px solid #AAA;
   padding: 0 0 16px;
 }
 #mainContent .box p,
@@ -1213,7 +1215,8 @@ footer #bottomBlackBar a.canLink:active {
   }
 }
 #mainContent figure img {
-  margin: auto;
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
 }
 #mainContent figure figcaption {
@@ -1261,9 +1264,15 @@ footer #bottomBlackBar a.canLink:active {
   clear: both;
   width: 100%;
 }
+#mainContent .tableScroller {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #AAA;
+  margin: 1em auto;
+}
 #mainContent table {
   border-collapse: collapse;
-  margin: 1em auto;
+  margin: 0 auto;
   font-size: 0.75em;
   width: 100%;
 }

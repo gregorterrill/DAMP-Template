@@ -42,7 +42,7 @@
     resizeDoubleCharts();
     resizeDoubleCols();
 
-    $(window).resize(function() {  
+    $(window).on("debouncedresize", function() { 
         resizeDoubleCharts();
         resizeDoubleCols();
     });
