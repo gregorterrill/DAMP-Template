@@ -1,0 +1,458 @@
+
+// This file contains all CSS related to the content within the mainContent div
+
+// --------------------------------------------------------------------------------------------------------------------- main typography
+
+h1,h2,h3,h4,h5,h6 {
+	line-height:1.2em; 
+	margin:0.8em 0;
+	font-weight:bold;
+	font-family:@sans2;
+}
+
+h1 {font-size: 1.714em; font-weight:normal; color:#1c467a; border-bottom:1px dashed #ccc; padding-bottom:4px; height:auto; letter-spacing:-0.02em;}
+h2 {font-size: 1.571em; font-weight:normal; color:#666; letter-spacing:-0.02em;}
+h3 {font-size: 1.286em; color:#666; letter-spacing:-0.02em;}
+h4 {font-size: 1.143em; color:#333;}
+h5 {font-size: 1.071em; color:#333;}
+h6 {font-size: 1em; color:#333;}
+
+a {.linkStyle(inherit,inherit);}
+a[href] {
+	.linkStyle(@navMed,@crimson,underline,underline);
+}
+
+// --------------------------------------------------------------------------------------------------------------------- home page styles
+
+.spotlight {
+	.column(12);
+	border-bottom:1px solid #AAA;
+	
+	img {
+		.column(5);
+		@media @tablet {.column(6);}
+		@media @mobile {.column(12);}
+	}
+	.spotlightDesc {
+		padding:0 2em 1em;
+
+		.column(7);
+		@media @tablet {.column(6);}
+		@media @mobile {.column(12);}
+	}
+}
+
+.headlines {
+	.column(5);
+	padding:0 0.8em;
+	@media @tablet {
+		.column(6);
+		padding:0 2em;
+	}
+	@media @mobile {
+		.column(12);
+	}
+}
+
+.features {
+	.column(4);
+	padding:0 0.8em;
+	@media @tablet {
+		.column(6);
+		padding:0 2em;
+	}
+	@media @mobile {
+		.column(12);
+	}
+}
+
+.dept {
+	.column(3);
+	padding:0 0.8em;
+	@media @tablet {
+		.column(12);
+		padding:0;	
+	}
+
+	.priorities {
+		@media @tablet {
+			.column(8);
+			padding:0 2em;
+		}
+		@media @midway {
+			.column(6);
+		}
+		@media @mobile {
+			.column(12);
+		}
+	}
+
+	.minister {
+		@media @tablet {
+			.column(4);
+			padding:0 2em 0 0;
+		}
+		@media @midway {
+			.column(6);
+			padding:0 2em;
+		}
+		@media @mobile {
+			.column(12);
+		}
+	}
+}
+
+.minister > div {
+	.greyGradient;
+	.rounded(8px);
+	border:1px solid #AAA;	
+	height: 128px;
+	overflow:hidden;
+	font-size:0.925em;
+	line-height:1.2em;
+
+	img {
+		width: 98px;
+		float:left;
+		margin-right:1em;
+	}
+
+	h3 {
+		font-size:0.925em;
+		font-weight:normal;
+
+		.minName {
+			font-weight:bold;
+			color: #001D45;
+			display:block;
+		}
+	}
+
+	a {
+		text-decoration:underline;
+	}
+}
+
+// --------------------------------------------------------------------------------------------------------------------- sub page styles
+
+#breadcrumbs {
+	width:110%;
+	margin-left:-5%;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 1em;
+
+
+	ol {
+		padding:0;
+		margin:0;
+		list-style-type: none;
+
+		&:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+	}
+	li {
+		float:left;
+		margin:0 5px 0 0;
+		padding:0 0 3px 0px;
+		line-height:18px;
+
+		a {
+			background: url(../img/breadcrumb.png) left 45% no-repeat;
+			padding: 0 0 3px 11px; 
+			font-size:0.925em; 
+			display:block;
+			.linkStyle(@navMed,@crimson,underline,none);
+		}
+
+		&:first-child a {background-image: none; padding-left:10px; margin-left:-10px;}
+	}
+}
+
+.alignCenter {text-align:center;}
+.alignLeft {text-align:left;}
+.alignRight {text-align:right;}
+.alignBottomRight {text-align:right;vertical-align:bottom;}
+.alignBottomLeft {text-align:left;vertical-align:bottom;}
+.noWrap {white-space:nowrap;}
+.pdfnotice {border: 1px dashed #ccc; font-size:0.75em; padding:8px; background:#eee;}
+.tableScroller {width:100%; overflow-x:auto;}
+
+.shadow {
+	-moz-box-shadow: 2px 2px 4px rgb(51,51,51);
+	-webkit-box-shadow: 2px 2px 4px rgb(51,51,51);
+	box-shadow: 2px 2px 4px rgb(51,51,51);
+	background:#ffffff;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#666666')"; //IE8
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#666666'); // < IE7
+}
+
+abbr, acronym {cursor:help;}
+
+ul, ol {
+	margin: 0 0 0 2em;
+	padding:0;
+
+	ol {
+		list-style-type: lower-alpha;
+		ol {list-style-type: lower-roman;}
+	}
+}
+li {margin:0.3em 0;}
+
+p code {background-color:#eee;border:1px solid #ccc;padding:1px 2px !important;}
+code {font-size:0.8em;}
+
+blockquote {
+	background:url(../img/quote.png) no-repeat 3px 3px #eee;
+	overflow:visible;
+	padding:34px 36px 16px;
+	.rounded(16px);
+	min-height:50px; 
+	max-width:1140px; 
+	display:block; 
+	margin: 16px auto 0;
+
+	p {width:100%; padding:0; margin:0 0 10px;}
+}
+
+hr {
+	display:block; 
+	margin: 0; 
+	clear:none;
+	background:#AAA; 
+	width:auto;
+}
+
+// --------------------------------------------------------------------------------------------------------------------- file link icons
+a[href$='.psd'], a[href$='.zip'], a[href$='.doc'], a[href$='.pdf'],
+a[href$='.xls'], a[href$='.xlt'], a[href$='.rtf'], a[href$='.txt'] {
+	background:transparent url(../img/icon-download.gif) no-repeat 0 0;padding-left:15px;
+}
+a[href^='http://www']{background:transparent url(../img/icon-external.gif) no-repeat right;padding-right:17px;}
+a[href*='rss'], a[href*='Rss'] {background:none; padding:0;}
+a[href^='mailto:']{background:transparent url(../img/icon-email.gif) no-repeat 0 2px;padding-left:19px;}
+
+// --------------------------------------------------------------------------------------------------------------------- box styles
+
+figure, .twoColChart, .box {
+	border: 1px solid #AAA; 
+	margin:1em auto; 
+	max-width:720px;
+
+	header {
+		width:100%; 
+		min-height:32px;
+		background-color:#2D6699; 
+		overflow:hidden; 
+		padding:2px 0; 
+		margin-bottom:10px;
+
+		h1,h2,h3,h4,h5,h6 {
+			width:auto; 
+			font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; 
+			margin:0;
+			font-weight:bold; 
+			text-align:left;
+			color:#fff; 
+			padding:8px; 
+			font-size:0.95em;
+		}
+	}
+} 
+
+.box {
+	margin:10px auto; 
+	overflow:hidden; 
+	border: 1px solid #CCC;
+	padding: 0 0 16px;
+	p,h1,h2,h3,h4,h5,h6 {padding:0; margin:16px 16px 0;}
+}
+
+.doubleBox {
+	padding:0;
+
+	.leftCol, .rightCol {
+		float:left;
+		padding: 0 0 16px; 
+		width:50%;
+
+		@media @midway {width:100%;}
+	}
+}
+
+// --------------------------------------------------------------------------------------------------------------------- figure styles
+
+figure {
+	
+	img {
+		margin:auto; 
+		max-width:100%;
+	}
+	figcaption {
+		border-top:1px solid #fff; 
+		background-color:#eee; 
+		padding:8px; 
+		font-size:0.825em; 
+		line-height:1.3em; 
+		max-width: 100%;
+	}
+}
+
+.twoColChart {
+
+	figure {
+		overflow:hidden; 
+		margin: 0 auto;
+		border: none;
+		float:left; 
+		width:50%;
+	}
+
+	footer {
+		clear:both;
+		background-color:#eee; 
+		padding:8px; 
+		font-size:0.825em; 
+		line-height:1.3em;
+		width: 100%;
+	}
+} 
+
+.chartNumber, .chartTitle {
+	display:block; 
+	text-transform:none; 
+	width:auto; 
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	border:none; 
+	margin:0;
+	font-weight:bold; 
+	text-align:left; 
+	color:#2D6699; 
+	padding:0 8px; 
+	font-size:0.95em; 
+	letter-spacing:0;
+}
+.chartTitle {font-size:1.125em;}
+.chartNumber {clear:both; width:100%;}
+
+// --------------------------------------------------------------------------------------------------------------------- table styles
+
+table {
+	border-collapse:collapse;
+	margin: 1em auto; 
+	font-size:0.75em;
+	width:100%;
+
+	caption {
+		font-weight:bold; 
+		text-align:left; 
+		background-color:#2D6699; 
+		color:#fff; 
+		padding:8px; 
+		font-size:1.25em;
+	}
+
+	th, td {padding: 4px 10px; border:1px solid #FFF;}
+	th {font-weight:normal; text-align:left;}
+	
+	.rh {
+		background-color:#eee; 
+		color:#555;
+		line-height: 1.8em;
+		vertical-align: bottom;
+
+		th {font-weight: bold; text-align: right;}
+	}
+
+	.r1 {background-color:#E5E5CB;}
+	.r2 {background-color:#D9E1E8;}
+
+	ul, ol, dl {margin-left:20px; padding-left:0;}
+} 
+
+// --------------------------------------------------------------------------------------------------------------------- form styles
+
+textarea, input, select{
+	.rounded(2px);
+	box-shadow:0px 0px 1px #999;
+	-moz-box-shadow:0px 0px 1px #999;
+	-webkit-box-shadow:0px 0px 1px #999;
+}
+
+textarea, select {
+	background:#fff;
+	vertical-align:top;
+	margin:0 0 5px;
+}
+
+select {
+	cursor:pointer;
+	padding:3px;
+}
+
+input:focus, input:active, select:active, select:focus, textarea:active, textarea:focus {
+	box-shadow:0px 0px 2px #333;
+	-moz-box-shadow:0px 0px 2px #333;
+	-webkit-box-shadow:0px 0px 2px #333;
+	background:#f0fcff;
+}
+
+legend {
+	margin-bottom:5px;
+	margin-left:-5px;
+	font-weight:700;
+	color:#333;
+}
+
+fieldset {
+	border:1px solid #ccc;
+	margin:0 0 10px;
+	.rounded(2px);
+	padding:0 10px 10px;
+}
+
+form p {margin-left:0;margin-right:0;}
+
+input {
+	vertical-align:middle;
+	margin:5px 5px 5px 0;
+	padding:2px 5px;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+	margin-top:20px;
+	min-height:24px;
+	background: #ccc url(../img/button.gif) 0 0 repeat-x;
+	border-bottom:1px solid #999;
+	border-right: 1px solid #999;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	color: #333;
+	padding: 2px 6px;
+	.rounded(2px);
+	text-shadow: 0 1px 0 #eee;
+	font-weight:400;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+input:focus[type="submit"], input:hover[type="submit"],
+input:focus[type="button"], input:hover[type="button"], 
+input:focus[type="reset"], input:hover[type="reset"] {
+	background: #ddd url(../img/search-button-focus.gif) 0 0 repeat-x;
+	text-shadow: 0 1px 0 #ddd;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	border-bottom:1px solid #999;
+	border-right: 1px solid #999;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+
+input:active[type="submit"], input:active[type="button"],input:active[type="reset"] {
+	-moz-box-shadow:inset 0px 0px 5px 2px #999;
+	-webkit-box-shadow:inset 0px 0px 5px 2px #999;
+	box-shadow:inset 0px 0px 5px 2px #999;
+	border: 1px solid #999;
+}

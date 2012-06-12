@@ -1,0 +1,275 @@
+<!doctype html>
+
+<!--[if IE 7]> <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8" />
+	
+	<!-- tell IE to use newest renderer or Chrome Frame if available (NOTE: The W3 Validator doesn't like this line but it is correct) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<!-- tell mobile devices to not render full site zoomed out -->
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+	<title>Device-Agnostic Master Page (DAMP) Template</title>
+
+	<meta name="description" content="A simplified, readable version of the Web Experience Toolkit using HTML5 and LESS" />
+	<meta name="keywords" content="Web, reusable components, toolkit, accessibility, usability, open source software" />
+	
+	<meta name="dcterms.title" content="Web Experience Toolkit Lite (WETLite)" />
+	<meta name="dcterms.description" content="A simplified, readable version of the Web Experience Toolkit using HTML5 and LESS" />
+	<meta name="dcterms.creator" content="Government of Canada, Department of Finance" />
+	<meta name="dcterms.issued" title="W3CDTF" content="YYYY-MM-DD" />
+	<meta name="dcterms.modified" title="W3CDTF" content="YYYY-MM-DD" />
+	<meta name="dcterms.subject" title="gccore" content="Internet;Standards;Design" />
+	<meta name="dcterms.language" title="ISO639-2/T" content="eng" />
+
+	<link rel="stylesheet" href="css/global.css" media="screen" />
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	<!-- allow older browsers to render HTML5 elements -->
+	<script src="js/libs/html5shiv.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+	<nav id="skipper">
+		<ul>
+			<li><a href="#mainContent">Skip to content</a></li>
+			<li><a href="#deptFooter">Skip to institutional links</a></li>
+		</ul>
+	</nav>
+
+	<div id="topBlackBar">
+
+		<div class="inner">
+
+			<div class="deptLogo"><img src="img/sig-eng-bg.gif" width="234" height="24" alt="Government of Canada"/></div>
+
+			<nav class="topSiteNav">	
+				<ul>
+					<li><a href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a>&nbsp;|&nbsp;</li>
+					<li><a href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a>&nbsp;|&nbsp;</li>
+					<li><a href="http://www.canada.gc.ca/depts/major/depind-eng.html">Departments</a>&nbsp;|&nbsp;</li>
+					<li><a href="#" class="lang">Fran&ccedil;ais</a></li>
+				</ul>
+			</nav>
+
+		</div> <!-- end of inner -->
+
+	</div> <!-- end of topBlackBar -->
+
+	
+	<div id="siteHeader" class="inner">
+		<a id="siteTitle" href="home-accueil-eng.html">DAMP Template</a>
+		<img id="canWordmark" src="img/wmms-bg.gif" height="39" width="147" alt="Symbol of the Government of Canada"/>
+		<div id="search"></div>
+	</div>
+
+	<nav id="topNav" class="inner">
+		<ul class="blueBar">
+			<li>
+				<a href="subpage-eng.html">Menu Item 1</a>
+				<ul class="subMenu">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a></li>
+					<li><a href="#">Item 6</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 2</a>
+				<ul class="subMenu">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 3</a>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 4</a>
+				<ul class="subMenu">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a></li>
+					<li><a href="#">Item 6</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 5</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="mainContent" class="inner">
+
+		<section class="spotlight">
+			<img src="img/spotlight/apr007.jpg" alt="News Photo" />
+			<div class="spotlightDesc">
+				<h2>In the Spotlight</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				<a href="#">Photo Gallery</a>
+			</div>
+		</section>
+
+		<section class="headlines">
+			<h2>Headlines</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. <a href="http://www.google.com">External Link</a>.
+			Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+
+		<section class="features">
+			<h2>Features</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+
+		<section class="dept">
+			<section class="priorities">
+				<h2>Priorities</h2>
+				<a href="#"><img src="img/priority1.jpg" alt="Priority" /></a>
+				<a href="#"><img src="img/priority2.jpg" alt="Priority" /></a>
+				<a href="#"><img src="img/priority3.jpg" alt="Priority" /></a>
+				<a href="#"><img src="img/priority4.jpg" alt="Priority" /></a>
+			</section>		
+			<section class="minister">
+				<h2>Our Minister</h2>
+				<div>
+					<img src="img/dept/minister.jpg" alt="Minister" />
+					<h3>The Honourable <span class="minName">Mr. X</span></h3>
+					<a href="#">About the minister</a>
+				</div>
+			</section>
+		</section>
+
+		
+	</div> <!-- end of mainContent -->
+
+	<footer>
+		<div id="footerDivider">
+			<div class="inner">
+				<span id="termsTrans"><a href="#">Terms and Conditions</a> | <a href="#">Transparency</a></span>
+				<span id="dateModified">Date modified: 2012-04-16</span>
+			</div>
+		</div>
+
+		<div id="deptFooter">
+
+			<ul class="inner">
+				<li>
+					<h2><a href="#">About Us</a></h2>
+					<ul>
+						<li><a href="#">Our Minister</a></li>
+						<li><a href="#">Branches</a></li>
+						<li><a href="#">Organizational Structure</a></li>
+						<li><a href="#">Site Map</a></li>
+					</ul>
+				</li>	
+				<li>
+					<h2><a href="#">News</a></h2>
+					<ul>
+						<li><a href="#">News Releases</a></li>
+						<li><a href="#">Media Advisories</a></li>
+						<li><a href="#">Speeches</a></li>
+						<li><a href="#">Photo Gallery</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2><a href="#">Contact Us</a></h2>
+					<ul>
+						<li><a href="#">Address</a></li>
+						<li><a href="#">Telephone Numbers</a></li>
+						<li><a href="#">Emails</a></li>
+						<li><a href="#">Frequently Asked Questions</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2><a href="#">Stay Connected</a></h2>
+					<ul>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">RSS Feeds</a></li>
+						<li><a href="#">Email Alerts</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</div> <!-- end of desktopFooter -->
+
+		<div id="bottomBlackBar">
+			<div class="inner">
+
+				<ul>
+					<li><a href="http://healthycanadians.gc.ca/index-eng.php"><strong>HEALTH</strong><br/>healthycanadians.gc.ca</a></li>
+					<li><a href="http://www.voyage.gc.ca/index-eng.asp"><strong>TRAVEL</strong><br/>travel.gc.ca</a></li>
+					<li><a href="http://www.servicecanada.gc.ca/eng/home.shtml"><strong>SERVICE CANADA</strong><br/>servicecanada.gc.ca</a></li>
+					<li><a href="http://www.jobbank.gc.ca/intro-eng.aspx"><strong>JOBS</strong><br/>jobbank.gc.ca</a></li>
+					<li><a href="http://actionplan.gc.ca/eng/index.asp"><strong>ECONOMY</strong><br/>actionplan.gc.ca</a></li>
+				</ul>
+
+				<a class="canLink" href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a>
+
+			</div>
+	 	</div> <!-- end of bottomBlackBar -->
+
+	 </footer>
+
+</div> <!-- end of container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+<script src="js/menu.js"></script>
+
+<script src="http://www.google.com/jsapi"></script>
+<script>window['google'] || document.write('<script src="js/libs/jsapi.js"><\/script>') </script>
+<script type="text/javascript">
+  google.load('search', '1', {language : 'en'});
+  google.setOnLoadCallback(function() {
+   var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+   		'014119912574548926501:4ewricx6cd4', customSearchOptions);
+   customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+   var options = new google.search.DrawOptions();
+   options.setAutoComplete(true);
+   options.enableSearchboxOnly("search-recherche-eng.html");
+   customSearchControl.draw('search', options);
+  }, true);
+</script>
+
+</body>
+</html>

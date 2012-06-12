@@ -1,0 +1,612 @@
+<!doctype html>
+
+<!--[if IE 7]> <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8" />
+	
+	<!-- tell IE to use newest renderer or Chrome Frame if available (NOTE: The W3 Validator doesn't like this line but it is correct) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<!-- tell mobile devices to not render full site zoomed out -->
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+	<title>Device-Agnostic Master Page (DAMP) Template</title>
+
+	<meta name="description" content="A simplified, readable version of the Web Experience Toolkit using HTML5 and LESS" />
+	<meta name="keywords" content="Web, reusable components, toolkit, accessibility, usability, open source software" />
+	
+	<meta name="dcterms.title" content="Web Experience Toolkit Lite (WETLite)" />
+	<meta name="dcterms.description" content="A simplified, readable version of the Web Experience Toolkit using HTML5 and LESS" />
+	<meta name="dcterms.creator" content="Government of Canada, Department of Finance" />
+	<meta name="dcterms.issued" title="W3CDTF" content="YYYY-MM-DD" />
+	<meta name="dcterms.modified" title="W3CDTF" content="YYYY-MM-DD" />
+	<meta name="dcterms.subject" title="gccore" content="Internet;Standards;Design" />
+	<meta name="dcterms.language" title="ISO639-2/T" content="eng" />
+
+	<link rel="stylesheet" href="css/global.css" media="screen" />
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	<!-- allow older browsers to render HTML5 elements -->
+	<script src="js/libs/html5shiv.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+	<nav id="skipper">
+		<ul>
+			<li><a href="#mainContent">Skip to content</a></li>
+			<li><a href="#deptFooter">Skip to institutional links</a></li>
+		</ul>
+	</nav>
+
+	<div id="topBlackBar">
+
+		<div class="inner">
+
+			<div class="deptLogo"><img src="img/sig-eng-bg.gif" width="234" height="24" alt="Government of Canada"/></div>
+
+			<nav class="topSiteNav">	
+				<ul>
+					<li><a href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a>&nbsp;|&nbsp;</li>
+					<li><a href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a>&nbsp;|&nbsp;</li>
+					<li><a href="http://www.canada.gc.ca/depts/major/depind-eng.html">Departments</a>&nbsp;|&nbsp;</li>
+					<li><a href="#" class="lang">Fran&ccedil;ais</a></li>
+				</ul>
+			</nav>
+
+		</div> <!-- end of inner -->
+
+	</div> <!-- end of topBlackBar -->
+
+	
+	<div id="siteHeader" class="inner">
+		<a id="siteTitle" href="home-accueil-eng.html">DAMP Template</a>
+		<img id="canWordmark" src="img/wmms-bg.gif" height="39" width="147" alt="Symbol of the Government of Canada"/>
+		<div id="search"></div>
+	</div>
+
+	<nav id="topNav" class="inner">
+		<ul class="blueBar">
+			<li>
+				<a href="subpage-eng.html">Menu Item 1</a>
+				<ul class="subMenu">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a></li>
+					<li><a href="#">Item 6</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 2</a>
+				<ul class="subMenu">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 3</a>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 4</a>
+				<ul class="subMenu">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a></li>
+					<li><a href="#">Item 6</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="subpage-eng.html">Menu Item 5</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="mainContent" class="inner subpage">
+
+		<nav id="breadcrumbs">
+			<ol>
+				<li><a href="home-accueil-eng.html">Home</a></li>
+				<li><a href="#">Subpage</a></li>
+			</ol>
+		</nav>
+
+		<h1>Page Heading (H1)</h1>
+		<h2>Section Heading (H2)</h2>
+		<h3>Subheading (H3)</h3>
+		<h4>Subheading (H4)</h4>
+		<h5>Subheading (H5)</h5>
+		<h6>Subheading (H6)</h6>
+		
+		<p>Cras et nulla nec massa eleifend fermentum. Nam ipsum enim,
+		faucibus sed vehicula eu, ullamcorper at elit. Nulla faucibus
+		mi nec lacus auctor faucibus. Praesent sollicitudin euismod dui,
+		quis auctor odio scelerisque ut. Praesent sollicitudin euismod dui,
+		quis auctor odio scelerisque ut. <a href="http://www.google.com">Note that in other WET Templates, IE7 fails to render the external link icon correctly for links that span multiple lines - here we have addressed this problem with JavaScript</a>. Cras arcu dui,
+		auctor eget dignissim quis, dictum vel risus. Cras et nulla nec massa eleifend fermentum. Nam ipsum enim,
+		faucibus sed vehicula eu, ullamcorper at elit. Nulla faucibus
+		mi nec lacus auctor faucibus. Cras et nulla nec massa eleifend fermentum. Nam ipsum enim,
+		faucibus sed vehicula eu, ullamcorper at elit. Nulla faucibus
+		mi nec lacus auctor faucibus.</p>
+
+		<p><a href="#">Link default appearance</a></p>
+		<p><a href="mailto:"><code>mailto:</code> link default appearance</a></p>
+		<p><a href="http://www.">Third party <code>http://www.</code> link default appearance</a></p>
+
+		<p><a href=".doc">Link to file downloads based on file type <code>.doc</code>, <code>.psd</code>, <code>.zip</code>, <code>.pdf</code>, <code>.xls</code>, <code>.xlt</code>, <code>.rtf</code> and <code>.txt</code> default appearance</a></p>
+
+		<p>Abbreviation default appearance: <abbr title="Treasury Board">TBS</abbr>.</p>
+		
+		<ul>
+			<li>unordered list (<code>ul</code>) first level default appearance
+				<ul>
+					<li>unordered list (<code>ul</code>) second level default appearance
+						<ul>
+							<li>unordered list (<code>ul</code>) third level default appearance</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<ol>
+			<li>ordered list (<code>ol</code>)  first level default appearance</li>
+			<li>ordered list (<code>ol</code>)   first level default appearance
+				<ol>
+					<li>ordered list (<code>ol</code>) second level default appearance</li>
+					<li>ordered list (<code>ol</code>)  second level default appearance
+						<ol>
+							<li>ordered list (<code>ol</code>) third level default appearance</li>
+							<li>ordered list (<code>ol</code>) third level default appearance</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+
+        <h2><a id="a3">Subheading (H2)</a></h2>
+        <h3><a id="a4">Subheading (H3)</a></h3>
+		
+		<p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+
+        <figure>
+            <header>
+            	<h4><a id="a5">Figure Header Heading (H4)</a></h4>
+            </header>
+            <span class="chartNumber">Chart Number</span>
+            <span class="chartTitle">Chart Title</span>
+            <img alt="Chart" src="img/content/C4-1-eng.jpg">
+            <figcaption>Source: Figcaption.</figcaption>
+        </figure>
+
+        <div class="twoColChart">
+            <header>
+            	<h4>Double Chart Header Heading (H4)</h4>
+            </header>
+            <span class="chartNumber">Chart Number</span>
+            <figure class="leftChart">
+            	<span class="chartTitle">Left Chart Title</span>
+            	<img src="img/content/C2-3a-eng.jpg" alt="Change in U.S. Employment. For details, see the previous paragraph.">
+            </figure>
+            <figure class="rightChart">
+            	<span class="chartTitle">Right Chart Title</span>
+            	<img src="img/content/C2-3b-eng.jpg" alt="U.S. Unemployment Rate. For details, see the previous paragraph."> </figure>
+            <footer>Note: Last data point is February 2012.<br />
+            Source: U.S. Bureau of Labor Statistics.</footer>
+        </div>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+        <div class="box">
+            <header>
+            	<h4><a id="a6">Box Header Heading (H4)</a></h4>
+            </header>
+            <h5><a id="a7">Heading (H5)</a></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h5><a id="a8">Heading (H5)</a></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="box doubleBox">
+            <div class="leftCol">
+				<header>
+					<h4><a id="a8">Double-Box Header Heading (H4)</a></h4>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="rightCol">
+				<header>
+					<h4><a id="a9">Double-Box Header Heading (H4)</a></h4>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+		<div class="tableScroller">
+		<table class="tbl-data tabular" cellpadding="2" cellspacing="0" width="100%">
+              <caption class="alignLeft">
+                Table 3.2<br>
+                <strong>Improving Conditions for Business Investment<br>
+                  millions  of dollars</strong>
+              </caption>
+              <tbody><tr class="rh">
+                <th></th>
+                <th class="alignBottomRight" id="C17" scope="col">2012–13</th>
+                <th class="alignBottomRight" id="C18" scope="col">2013–14</th>
+                <th class="alignBottomRight" id="C19" scope="col">Total</th>
+              </tr>
+              <tr class="r1">
+                <th id="C20" scope="row"><strong>Responsible Resource Development</strong></th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+              </tr>
+              <tr class="r2">
+                <th id="C21" scope="row">Major Projects Management Office Initiative</th>
+                <td class="alignBottomRight" headers="C17 C21">27</td>
+                <td class="alignBottomRight" headers="C18 C21">27</td>
+                <td class="alignBottomRight" headers="C19 C21">54</td>
+              </tr>
+              <tr class="r1">
+                <th id="C22" scope="row">Consultation Under the Canadian Environmental 
+                  Assessment Act</th>
+                <td class="alignBottomRight" headers="C17 C22">7 </td>
+                <td class="alignBottomRight" headers="C18 C22">7 </td>
+                <td class="alignBottomRight" headers="C19 C22">14 </td>
+              </tr>
+              <tr class="r2">
+                <th id="C23" scope="row">Supporting Responsible Energy Development</th>
+                <td class="alignBottomRight" headers="C17 C23">12</td>
+                <td class="alignBottomRight" headers="C18 C23">24</td>
+                <td class="alignBottomRight" headers="C19 C23">36</td>
+              </tr>
+              <tr class="r1">
+                <th id="C24" scope="row">Strengthening Pipeline    Safety</th>
+                <td class="alignBottomRight" headers="C17 C24">7</td>
+                <td class="alignBottomRight" headers="C18 C24">6</td>
+                <td class="alignBottomRight" headers="C19 C24">14</td>
+              </tr>
+              <tr class="r2">
+                <th id="C25" scope="row">The Northern Pipeline Agency</th>
+                <td class="alignBottomRight" headers="C17 C25">24</td>
+                <td class="alignBottomRight" headers="C18 C25">23</td>
+                <td class="alignBottomRight" headers="C19 C25">47</td>
+              </tr>
+              <tr class="r1">
+                <th id="C26" scope="row">Amending Mining Regulations </th>
+                <td class="alignBottomRight" headers="C17 C26">1</td>
+                <td class="alignBottomRight" headers="C18 C26">1</td>
+                <td class="alignBottomRight" headers="C19 C26">1</td>
+              </tr>
+              <tr class="r1">
+                <th>&nbsp;</th>
+                <td colspan="3" class="alignBottomRight"><hr></td>
+              </tr>
+              <tr class="r2">
+                <th id="C27" scope="row">Subtotal—Responsible Resource Development</th>
+                <td class="alignBottomRight" headers="C17 C27">78</td>
+                <td class="alignBottomRight" headers="C18 C27">87</td>
+                <td class="alignBottomRight" headers="C19 C27">165</td>
+              </tr>
+              <tr class="r1">
+                <th id="C28" scope="row"><strong>Investing in Our Natural Resources </strong></th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+              </tr>
+              <tr class="r2">
+                <th id="C29" scope="row">Supporting Junior Mineral Exploration</th>
+                <td class="alignBottomRight" headers="C17 C29">130</td>
+                <td class="alignBottomRight" headers="C18 C29">-30</td>
+                <td class="alignBottomRight" headers="C19 C29">100</td>
+              </tr>
+              <tr class="r1">
+                <th id="C30" scope="row">Assessing Diamonds in the North</th>
+                <td class="alignBottomRight" headers="C17 C30">6 </td>
+                <td class="alignBottomRight" headers="C18 C30">6 </td>
+                <td class="alignBottomRight" headers="C19 C30">12 </td>
+              </tr>
+              <tr class="r1">
+                <th>&nbsp;</th>
+                <td colspan="3" class="alignBottomRight"><hr></td>
+              </tr>
+              <tr class="r2">
+                <th id="C31" scope="row">Subtotal—Investing in Our Natural Resources</th>
+                <td class="alignBottomRight" headers="C17 C31">136</td>
+                <td class="alignBottomRight" headers="C18 C31">-24</td>
+                <td class="alignBottomRight" headers="C19 C31">112</td>
+              </tr>
+              <tr class="r1">
+                <th id="C32" scope="row"><strong>Expanding Trade and Opening New Markets for Canadian&nbsp;Businesses</strong></th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+              </tr>
+              <tr class="r2">
+                <th id="C33" scope="row">Trade Measures to Support the Energy Industry</th>
+                <td class="alignBottomRight" headers="C17 C33">30</td>
+                <td class="alignBottomRight" headers="C18 C33">30</td>
+                <td class="alignBottomRight" headers="C19 C33">60</td>
+              </tr>
+              <tr class="r1">
+                <th id="C34" scope="row">Increasing Travellers’ Exemptions</th>
+                <td class="alignBottomRight" headers="C17 C34">13</td>
+                <td class="alignBottomRight" headers="C18 C34">17</td>
+                <td class="alignBottomRight" headers="C19 C34">30</td>
+              </tr>
+              <tr class="r2">
+                <th id="C35" scope="row">Tax Relief for Foreign-Based Rental Vehicles</th>
+                <td class="alignBottomRight" headers="C17 C35">-</td>
+                <td class="alignBottomRight" headers="C18 C35">-</td>
+                <td class="alignBottomRight" headers="C19 C35">-</td>
+              </tr>
+              <tr class="r2">
+                <th>&nbsp;</th>
+                <td colspan="3" class="alignBottomRight"><hr></td>
+              </tr>
+              <tr class="r1">
+                <th id="C36" scope="row">Subtotal—Strengthening Canada's Trading Relationships 
+                  and Supporting Sustainable Global Growth</th>
+                <td class="alignBottomRight" headers="C17 C36">43</td>
+                <td class="alignBottomRight" headers="C18 C36">47</td>
+                <td class="alignBottomRight" headers="C19 C36">90</td>
+              </tr>
+              <tr class="r2">
+                <th id="C37" scope="row"><strong>Keeping Taxes Low for Job-Creating Businesses</strong></th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+              </tr>
+              <tr class="r1">
+                <th id="C38" scope="row">Enhancing the Neutrality of the Tax System</th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+              </tr>
+              <tr class="r2">
+                <th id="C39" scope="row">&nbsp;Phasing Out the Corporate Mineral Exploration and    Development Tax Credit </th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight" headers="C18 C39">-10</td>
+                <td class="alignBottomRight" headers="C19 C39">-10</td>
+              </tr>
+              <tr class="r1">
+                <th id="C40" scope="row"><strong>Improving Economic Conditions 
+                  for Farmers and Fishermen </strong></th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+              </tr>
+              <tr class="r2">
+                <th id="C41" scope="row">Strengthening Agricultural Institutions</th>
+                <td class="alignBottomRight" headers="C17 C41">27</td>
+                <td class="alignBottomRight" headers="C18 C41">17</td>
+                <td class="alignBottomRight" headers="C19 C41">44</td>
+              </tr>
+              <tr class="r1">
+                <th id="C42" scope="row">Supporting Canada’s Fisheries</th>
+                <td class="alignBottomRight" headers="C17 C42">11</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight" headers="C19 C42">11</td>
+              </tr>
+              <tr class="r1">
+                <th>&nbsp;</th>
+                <td colspan="3" class="alignBottomRight"><hr></td>
+              </tr>
+              <tr class="r2">
+                <th id="C43" scope="row">Subtotal—Improving Economic Conditions for Farmers 
+                  and Fishermen </th>
+                <td class="alignBottomRight" headers="C17 C43">38 </td>
+                <td class="alignBottomRight" headers="C18 C43">17</td>
+                <td class="alignBottomRight" headers="C19 C43">55 </td>
+              </tr>
+              <tr class="r1">
+                <th id="C44" scope="row"><strong>Further Developing Canada’s Financial Sector    Advantage </strong></th>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+                <td class="alignBottomRight">&nbsp;</td>
+              </tr>
+              <tr class="r2">
+                <th id="C45" scope="row">Continuing to Fight Counterfeit Bank Notes</th>
+                <td class="alignBottomRight" headers="C17 C45">3</td>
+                <td class="alignBottomRight" headers="C18 C45">3</td>
+                <td class="alignBottomRight" headers="C19 C45">6</td>
+              </tr>
+              <tr class="r1">
+                <th id="C46" scope="row"><strong>Total—Improving Conditions for Business Investment</strong></th>
+                <td class="alignBottomRight" headers="C17 C46">298 </td>
+                <td class="alignBottomRight" headers="C18 C46">120 </td>
+                <td class="alignBottomRight" headers="C19 C46">418 </td>
+              </tr>
+              <tr class="r2">
+                <th id="C47" scope="row">Less funds existing in the fiscal framework</th>
+                <td class="alignBottomRight" headers="C17 C47">85 </td>
+                <td class="alignBottomRight" headers="C18 C47">71 </td>
+                <td class="alignBottomRight" headers="C19 C47">156 </td>
+              </tr>
+              <tr class="r1">
+                <th id="C48" scope="row"><strong>Net fiscal cost</strong></th>
+                <td class="alignBottomRight" headers="C17 C48">212 </td>
+                <td class="alignBottomRight" headers="C18 C48">50 </td>
+                <td class="alignBottomRight" headers="C19 C48">262 </td>
+              </tr>
+              <tr class="rh">
+                <td colspan="4">Note: Totals may not add due to rounding.</td>
+              </tr>
+            </tbody></table>
+		</div>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<blockquote>
+			<p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+			<p class="alignRight">&mdash;&nbsp;John Smith</p>
+		</blockquote>
+		
+	</div> <!-- end of mainContent -->
+
+	<footer>
+		<div id="footerDivider">
+			<div class="inner">
+				<span id="termsTrans"><a href="#">Terms and Conditions</a> | <a href="#">Transparency</a></span>
+				<span id="dateModified">Date modified: 2012-04-16</span>
+			</div>
+		</div>
+
+		<div id="deptFooter">
+
+			<ul class="inner">
+				<li>
+					<h2><a href="#">About Us</a></h2>
+					<ul>
+						<li><a href="#">Our Minister</a></li>
+						<li><a href="#">Branches</a></li>
+						<li><a href="#">Organizational Structure</a></li>
+						<li><a href="#">Site Map</a></li>
+					</ul>
+				</li>	
+				<li>
+					<h2><a href="#">News</a></h2>
+					<ul>
+						<li><a href="#">News Releases</a></li>
+						<li><a href="#">Media Advisories</a></li>
+						<li><a href="#">Speeches</a></li>
+						<li><a href="#">Photo Gallery</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2><a href="#">Contact Us</a></h2>
+					<ul>
+						<li><a href="#">Address</a></li>
+						<li><a href="#">Telephone Numbers</a></li>
+						<li><a href="#">Emails</a></li>
+						<li><a href="#">Frequently Asked Questions</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2><a href="#">Stay Connected</a></h2>
+					<ul>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">RSS Feeds</a></li>
+						<li><a href="#">Email Alerts</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</div> <!-- end of desktopFooter -->
+
+		<div id="bottomBlackBar">
+			<div class="inner">
+
+				<ul>
+					<li><a href="http://healthycanadians.gc.ca/index-eng.php"><strong>HEALTH</strong><br/>healthycanadians.gc.ca</a></li>
+					<li><a href="http://www.voyage.gc.ca/index-eng.asp"><strong>TRAVEL</strong><br/>travel.gc.ca</a></li>
+					<li><a href="http://www.servicecanada.gc.ca/eng/home.shtml"><strong>SERVICE CANADA</strong><br/>servicecanada.gc.ca</a></li>
+					<li><a href="http://www.jobbank.gc.ca/intro-eng.aspx"><strong>JOBS</strong><br/>jobbank.gc.ca</a></li>
+					<li><a href="http://actionplan.gc.ca/eng/index.asp"><strong>ECONOMY</strong><br/>actionplan.gc.ca</a></li>
+				</ul>
+
+				<a class="canLink" href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a>
+
+			</div>
+	 	</div> <!-- end of bottomBlackBar -->
+
+	 </footer>
+
+</div> <!-- end of container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+
+<script src="js/menu.js"></script>
+<script src="js/content.js"></script>
+
+<script src="http://www.google.com/jsapi"></script>
+<script>window['google'] || document.write('<script src="js/libs/jsapi.js"><\/script>') </script>
+<script type="text/javascript">
+  google.load('search', '1', {language : 'en'});
+  google.setOnLoadCallback(function() {
+   var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+   		'014119912574548926501:4ewricx6cd4', customSearchOptions);
+   customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+   var options = new google.search.DrawOptions();
+   options.setAutoComplete(true);
+   options.enableSearchboxOnly("search-recherche-eng.html");
+   customSearchControl.draw('search', options);
+  }, true);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+// --------------------------------------------------------------------------------------------------------------------- import semantic grid system
+@import 'semanticgrid.less';
+@columns: 12;
+@gutter-width: 0;
+@total-width: 100%;
+
+// --------------------------------------------------------------------------------------------------------------------- use the better box model
+* {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+// --------------------------------------------------------------------------------------------------------------------- media query breakpoints
+@desktop: ~" screen and (min-width: 977px)"; 
+@tablet: ~" screen and (max-width: 976px)";		//960 + 16px for scrollbar
+@midway: ~" screen and (max-width: 768px)";		//roughly halfway
+@mobile: ~" screen and (max-width: 620px)";		//good golly, phones are getting big these days
+
+// --------------------------------------------------------------------------------------------------------------------- global site variables
+@navBG: #146094;
+@navDarker: #0F315B;
+@navDark: #23457F;
+@navLight: #87AEC9;
+@navMed: #15598F;
+@crimson: #CC0000;
+
+@topNavItemHeight: 27px;
+@topNavMobileHeight: @topNavItemHeight * 5 * 1.5;
+
+@sans1: Verdana, Arial, Helvetica, sans-serif;
+@sans2: Arial, Helvetica, sans-serif;
+
+// --------------------------------------------------------------------------------------------------------------------- LESS mix-ins
+
+.hideFor (@screenType) {
+	@media @@screenType {
+		display:none !important;
+	}
+}
+
+.linkStyle (@normalColor, @hoverColor, @hoverDeco:none, @normalDeco:none) {
+	color: @normalColor;
+	text-decoration:@normalDeco;
+	&:visited {color: @normalColor; text-decoration:@normalDeco;}
+	&:hover, &:focus, &:active {color: @hoverColor; text-decoration:@hoverDeco;} 
+}
+
+.rounded (@radius:6px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.navGradient {
+	background: @navBG; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE0NjA5NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMzQ1N2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, @navBG 0%, @navDark 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@navBG), color-stop(100%,@navDark)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @navBG 0%,@navDark 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @navBG 0%,@navDark 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @navBG 0%,@navDark 100%); /* IE10+ */
+	background: linear-gradient(top, @navBG 0%,@navDark 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#146094', endColorstr='#23457f',GradientType=0 ); /* IE6-8 */
+}
+
+.greyGradient {
+	background: #eeeeee; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcyJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiM2IzYjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 72%, #b3b3b3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(72%,#eeeeee), color-stop(100%,#b3b3b3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* IE10+ */
+	background: linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#b3b3b3',GradientType=0 ); /* IE6-8 */
+}
+
+// --------------------------------------------------------------------------------------------------------------------- basic reset / main element styles
+html, body {height:100%; margin:0; padding:0; font:14px/21px @sans1;}
+ul {margin:0; padding:0;}
+a {.linkStyle(#333,#333,underline);}
+
+@import 'headerfooter.less';	//everything NOT IN mainContent
+
+
+// --------------------------------------------------------------------------------------------------------------------- main content box style
+#mainContent {
+	border-top:4px solid #CCC;
+	border-left:1px solid #AAA; 
+	border-right:1px solid #AAA;
+	padding: 0 0 5em; //bottom padding ensures content doesn't clip footer transition
+	min-height:600px;
+	background: url("../img/bg_mainContainer.png") top center repeat-x #FFF;
+
+	@media @mobile {position:relative; top:-1px;}
+	
+	&.subpage {
+		padding: 1em 5em 5em;
+		@media @mobile {padding: 1em 1em 5em;}
+	}
+
+	@import 'content.less';
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------- helper classes
+.inner {
+	overflow:hidden;
+	width:100%;
+	max-width:960px;
+	margin:auto;
+
+	@media @tablet {padding:0 12px;}
+}
