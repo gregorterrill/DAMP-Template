@@ -66,7 +66,7 @@
 }
 
 /*
-// This section uses Jacque's new version of the header background with separate images
+// This section uses Jacques' new version of the header background with separate images
 
 .container {background: url("../img/bluewaves.jpg") 15% 40px repeat-x #FFF;}
 #siteHeader {
@@ -110,7 +110,6 @@
 	border-bottom:none;
 	position:relative;
 	top:1px;
-	z-index:2;
 
 	@media @mobile {width:100%;}
 
@@ -160,9 +159,7 @@
 	border: 1px solid @navDark;
 	border-top: 1px solid @navLight;
 	border-bottom:none;
-	position:relative;
-	z-index:1;
-	top:-1px;
+	margin-top:-1px;
 	overflow:visible;
 
 	@media @mobile {border-bottom:1px solid #A2B4C8;}
@@ -170,6 +167,8 @@
 	ul.blueBar {
 		list-style-type:none;
 		color:#FFF;
+
+		@media @mobile {padding: 1em 0; overflow:hidden;}
 
 		> li {
 			float:left;
@@ -198,7 +197,16 @@
 			.expandicon {
 				display: inline-block;
 				padding-right: 12px; 
-				background: url("../img/menu-dropdown.gif") no-repeat right center;
+				background: url("../img/expand.gif") no-repeat right center;
+
+				@media @mobile {
+					position:absolute; 
+					padding: 0; 
+					right: 30px; 
+					width:24px; 
+					height: 26px; 
+					background: url("../img/expand_mobile.png") no-repeat right center;
+				}
 			}
 
 			a {
@@ -211,7 +219,7 @@
 
 				@media @mobile {
 					font-size:1.2em;
-					padding-top:8px;
+					padding: 8px 0 0;
 					height:@topNavItemHeight*1.5;
 				}
 			}
@@ -224,14 +232,26 @@
 		position:absolute;
 		top:@topNavItemHeight;
 		left:-1px;
-		z-index:2;
+		z-index:3;
 		min-width:250px;
 		background-color: @navDark;
-		border:1px solid @navMed;
+		border:1px solid #CCC;
 		border-top: 5px solid @navDarker;
 		border-radius: 0 0 6px 6px;
+		box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+		-moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+		overflow:hidden;
 
-		@media @mobile {width:100%; border-radius:0px; border-top:none; position:static;}
+		@media @mobile {
+			width:100%; 
+			border:1px solid @navDarker;
+			border-radius:0px; 
+			border-top:none; 
+			position:static; 
+			box-shadow:none; 
+			-moz-box-shadow: none;
+			-webkit-box-shadow:none;}
 
 		a {
 			padding: 0 8px;
