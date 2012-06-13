@@ -416,7 +416,7 @@ a:active {
     height: 40.5px;
   }
 }
-#topNav ul.subMenu {
+#topNav ul.sub-menu {
   list-style-type: none;
   display: none;
   position: absolute;
@@ -434,7 +434,7 @@ a:active {
   overflow: hidden;
 }
 @media  screen and (max-width: 620px) {
-  #topNav ul.subMenu {
+  #topNav ul.sub-menu {
     width: 100%;
     border: 1px solid #0f315b;
     border-radius: 0px;
@@ -445,12 +445,12 @@ a:active {
     -webkit-box-shadow: none;
   }
 }
-#topNav ul.subMenu a {
+#topNav ul.sub-menu a {
   padding: 0 8px;
 }
-#topNav ul.subMenu a:focus,
-#topNav ul.subMenu a:hover,
-#topNav ul.subMenu a:active {
+#topNav ul.sub-menu a:focus,
+#topNav ul.sub-menu a:hover,
+#topNav ul.sub-menu a:active {
   background-color: #15598f;
 }
 footer {
@@ -717,7 +717,6 @@ footer #bottomBlackBar a.canLink:active {
   line-height: 1.333em;
 }
 #mainContent a {
-  border: none;
   color: inherit;
   text-decoration: none;
 }
@@ -744,6 +743,9 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent a[href]:active {
   color: #cc0000;
   text-decoration: underline;
+}
+#mainContent a img {
+  border: none;
 }
 #mainContent .spotlight {
   display: inline;

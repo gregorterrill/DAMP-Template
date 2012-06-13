@@ -1,10 +1,10 @@
 
-// This script manages all user interaction with the top blue navigation bar and its submenus
+// This script manages all user interaction with the top blue navigation bar and its sub-menus
 
 (function($){
 
 // --------------------------------------------------------------------------------------------------------------------- add dropdown arrows
-	$('.subMenu').each(function() {
+	$('.sub-menu').each(function() {
 		$(this).prev().append('<span class="expandicon">&nbsp;</span>');
 	});
 
@@ -25,7 +25,7 @@
 		if ( event.keyCode == key.esc ) {
 			event.preventDefault();
 			$(this).find('a:focus').blur();
-			$('.subMenu:visible').hide();
+			$('.sub-menu:visible').hide();
 		}
 	});
 
@@ -44,29 +44,29 @@
 
 		} else if ( event.keyCode == key.down ) {
 			event.preventDefault();
-			if ($(this).next().hasClass('subMenu')) {
+			if ($(this).next().hasClass('sub-menu')) {
 				$(this).next().find('a:first').focus();
 			}
 		}
 	});
 
-	//submenu keypresses
-	$(".subMenu a").bind('keydown',function(event) {
+	//sub-menu keypresses
+	$(".sub-menu a").bind('keydown',function(event) {
 
 		if ( event.keyCode == key.left ) {
 			event.preventDefault();
-			$(this).parents('.subMenu').parent().prev().children('a').focus();
+			$(this).parents('.sub-menu').parent().prev().children('a').focus();
 
 		} else if ( event.keyCode == key.right ) {
 			event.preventDefault();
-			$(this).parents('.subMenu').parent().next().children('a').focus();
+			$(this).parents('.sub-menu').parent().next().children('a').focus();
 
 		} else if ( event.keyCode == key.up ) {
 			event.preventDefault();
 
-			//are we going to a top-level or prev submenu item?
+			//are we going to a top-level or prev sub-menu item?
 			if ($(this).parent().prev().length == 0) {
-				$(this).parents('.subMenu').prev().focus();
+				$(this).parents('.sub-menu').prev().focus();
 			} else {
 				$(this).parent().prev().children('a').focus();
 			}
@@ -87,34 +87,34 @@
 		$('.blueBar > li').on('mouseenter focusin', function() {
 
 			// deactive and hide other menus and make this one active
-			$(this).siblings().removeClass('active').children('.subMenu').hide();
+			$(this).siblings().removeClass('active').children('.sub-menu').hide();
 			$(this).addClass('active');
-			// slide or show submenu depending on the media breakpoint
-			($(window).width() <= 620) ? $('.active .subMenu').slideDown() : $('.active .subMenu').show();
+			// slide or show sub-menu depending on the media breakpoint
+			($(window).width() <= 620) ? $('.active .sub-menu').slideDown() : $('.active .sub-menu').show();
 		});
 
 		// mouse out of list item
 		$('.blueBar > li').on('mouseleave', function() {
-			$(this).removeClass('active').children('.subMenu').hide();
+			$(this).removeClass('active').children('.sub-menu').hide();
 		});
 
-		// tab out of last item in submenu
-		$('.subMenu').each(function() {
+		// tab out of last item in sub-menu
+		$('.sub-menu').each(function() {
 			$(this).children('li:last').keypress(function(event) {
 				if (event.keyCode == key.tab) {
-					$(this).parent('.subMenu').hide();
+					$(this).parent('.sub-menu').hide();
 				}
 			});
 		});
 
-		// tab out of a top level item with no submenu
+		// tab out of a top level item with no sub-menu
 		$('.blueBar').on('focusout', function() {
 			$('.blueBar > li').removeClass('active');
 		});
 
-		// if you're tabbed into a submenu and click somewhere else on the screen, hide it
+		// if you're tabbed into a sub-menu and click somewhere else on the screen, hide it
 		$("html:not(.blueBar)").on('click', function() {
-			$('.subMenu:visible').hide();
+			$('.sub-menu:visible').hide();
 			$('.active').removeClass('active');
 		});
 
@@ -128,13 +128,13 @@
 			// on first tap, open the menu. on second tap, follow the top-level link
 			if (!$(this).hasClass('active')) {
 				e.preventDefault();
-				$(this).addClass('active').children('.subMenu').show();
+				$(this).addClass('active').children('.sub-menu').show();
 			}
 		});
 
-		// TODO: if you're in a submenu and click somewhere else on the screen, hide it
+		// TODO: if you're in a sub-menu and click somewhere else on the screen, hide it
 		//$('html:not(.active)').on('click', function() {
-		//	$('.subMenu:visible').hide();
+		//	$('.sub-menu:visible').hide();
 		//});
 	}
 

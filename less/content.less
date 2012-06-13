@@ -27,9 +27,10 @@ h6 {font-size: 1em;}
 p, ul, ol, span {line-height:1.333em;}
 
 a {
-	border:none;
 	.linkStyle(inherit,inherit);
 	&[href] {.linkStyle(@navMed,@crimson,underline,underline);}
+
+	img {border:none;} //IE fix
 }
 
 // --------------------------------------------------------------------------------------------------------------------- home page styles
