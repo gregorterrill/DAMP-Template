@@ -21,7 +21,7 @@
 	};
 
 	//escape
-	$(".blueBar").keypress(function(event) {
+	$(".blueBar").bind('keydown',function(event) {
 		if ( event.keyCode == key.esc ) {
 			event.preventDefault();
 			$(this).find('a:focus').blur();
@@ -32,7 +32,7 @@
 	//TODO: when you start using the arrow keys, the top-level items don't stay active dark color - fix this
 
 	//top level keypresses
-	$(".blueBar > li > a").keypress(function(event) {
+	$(".blueBar > li > a").bind('keydown',function(event) {
 
 		if ( event.keyCode == key.left ) {
 			event.preventDefault();
@@ -51,7 +51,7 @@
 	});
 
 	//submenu keypresses
-	$(".subMenu a").keypress(function(event) {
+	$(".subMenu a").bind('keydown',function(event) {
 
 		if ( event.keyCode == key.left ) {
 			event.preventDefault();
