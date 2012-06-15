@@ -389,3 +389,21 @@ footer {
 		}
 	}
 }
+
+// --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
+
+.ie {	
+	//header fixes
+	#topBlackBar .inner {position:relative;} //to enable forcing topSiteNav right
+	.deptLogo {width:234px;} // -2px compensating for left padding
+	.topSiteNav ul {position:absolute; top:0; right:0;} //force right
+	#siteTitle {line-height:1.5em;} //prevents caps, ascenders and descenders from getting cut off
+	#search {left:1px;}
+	.sub-menu, .sub-menu a {width:100%;}
+	
+	//footer fixes
+	#footerDivider .inner {width: 936px;} // 960-24px of padding - this fixes Terms/Trans and Date Modified
+	#deptFooter {padding-bottom:20px;}
+	#bottomBlackBar ul {width: 824px;}
+	#bottomBlackBar li {width:160px;}
+}

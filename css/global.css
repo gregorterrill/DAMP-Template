@@ -15,7 +15,6 @@ body:after {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(boxsizing.htc);
 }
 .navGradient {
   background: #146094;
@@ -646,6 +645,39 @@ footer #bottomBlackBar a.canLink:active {
   color: #ffffff;
   text-decoration: underline;
 }
+.ie #topBlackBar .inner {
+  position: relative;
+}
+.ie .deptLogo {
+  width: 234px;
+}
+.ie .topSiteNav ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.ie #siteTitle {
+  line-height: 1.5em;
+}
+.ie #search {
+  left: 1px;
+}
+.ie .sub-menu,
+.ie .sub-menu a {
+  width: 100%;
+}
+.ie #footerDivider .inner {
+  width: 936px;
+}
+.ie #deptFooter {
+  padding-bottom: 20px;
+}
+.ie #bottomBlackBar ul {
+  width: 824px;
+}
+.ie #bottomBlackBar li {
+  width: 160px;
+}
 #mainContent {
   border-top: 4px solid #CCC;
   border-left: 1px solid #AAA;
@@ -1218,6 +1250,11 @@ footer #bottomBlackBar a.canLink:active {
   padding: 8px;
   font-size: 0.95em;
 }
+#mainContent figure header a,
+#mainContent .twoColChart header a,
+#mainContent .box header a {
+  color: #FFF;
+}
 #mainContent .box {
   margin: 10px auto;
   overflow: hidden;
@@ -1463,4 +1500,18 @@ footer #bottomBlackBar a.canLink:active {
 html.ie .inner {
   width: 960px;
   margin: auto;
+}
+html.ie #mainContent section {
+  padding: 0;
+}
+html.ie #mainContent section .spotlightDesc {
+  padding: 0;
+}
+html.ie #mainContent.subpage {
+  width: 880px;
+  padding: 1em 40px 5em;
+}
+html.ie #breadcrumbs {
+  margin-left: -25px !important;
+  width: 930px !important;
 }

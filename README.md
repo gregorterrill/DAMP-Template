@@ -8,4 +8,3 @@ This is a lightweight version of the Web Experience Toolkit (WET) designed from 
 * LESS files are divided into global styles, header/footer styles, and content styles.
 * The Semantic Grid System for LESS (http://semantic.gs) is used for content layout.
 * debouncedresize.js (https://github.com/louisremi/jquery-smartresize) is used to decrease the number of resize events fired when adjusting window size/orientation.
-* boxsizing.htc is an &lt;IE7 polyfill allowing us to use the better box model. More info: http://paulirish.com/2012/box-sizing-border-box-ftw/
