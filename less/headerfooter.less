@@ -195,6 +195,22 @@
 				background-color: @navDarker;
 			}
 
+			a {
+				padding: 2px 8px 0;
+				display:block;
+				height:@topNavItemHeight;
+				font-weight:bold;
+				font-size:0.925em;
+				.linkStyle(#FFF,#FFF,underline);
+
+				@media @mobile {
+					font-size:1.2em;
+					padding: 8px 0 0;
+					height:@topNavItemHeight*1.6;
+					.linkStyle(#FFF,#FFF,none);
+				}
+			}
+
 			.expandicon {
 				display: inline-block;
 				padding-right: 12px; 
@@ -207,21 +223,6 @@
 					width:24px; 
 					height: 26px; 
 					background: url("../img/expand_mobile.png") no-repeat right center;
-				}
-			}
-
-			a {
-				padding: 2px 8px 0;
-				display:block;
-				height:@topNavItemHeight;
-				font-weight:bold;
-				font-size:0.925em;
-				.linkStyle(#FFF,#FFF,underline);
-
-				@media @mobile {
-					font-size:1.2em;
-					padding: 8px 0 0;
-					height:@topNavItemHeight*1.5;
 				}
 			}
 		}

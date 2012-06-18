@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,h6 {
 h1,h2 {margin:0.5em 0; font-weight:normal;}
 h2,h3 {color:@midHeading;}
 
-h1 {font-size: 1.714em; color: @topHeading; border-bottom:1px dashed #ccc; padding-bottom:4px;}
+h1 {font-size: 1.714em; color: @topHeading; border-bottom:1px dashed #ccc; padding-bottom:4px; margin-top:0.2em;}
 h2 {font-size: 1.571em;}
 h3 {font-size: 1.286em;}
 h4 {font-size: 1.143em;}
@@ -146,13 +146,55 @@ a {
 
 // --------------------------------------------------------------------------------------------------------------------- sub page styles
 
-#breadcrumbs {
-	width:110%;
-	margin-left:-3em;
-	border-bottom: 1px dashed #ccc;
-	margin-bottom: 1em;
+#sideNav {
 
-	@media @mobile {margin-left:0; width:100%;}
+	width:20%;
+	float:left;
+	padding-left:1em;
+	@media @mobile {display:none;}
+
+	h6 {
+		margin:0.5em 0;
+
+		a {
+			font-family:@sans1;
+			font-size:0.925em;
+			width:100%;
+			display:block;
+			.rounded(2px);
+			padding:2px 4px;
+			background-color:#DDD;
+			.linkStyle(#333,#333,underline);
+		}
+	}
+
+	ul {
+		list-style-type:none;
+		margin:0;
+		padding:0 0 0 1em;
+		font-size:0.925em;
+		a {.linkStyle(#333,@crimson,underline);}
+
+		ul {
+			margin: 2px 0 0 6px;
+			padding-left: 6px;
+			border-left:1px solid #CCC;
+			font-size:1em;
+		}
+	}
+}
+
+#subpageContent {
+	width:80%;
+	float:left;
+	padding: 0 3em 0 1em;
+	@media @mobile {width:100%; padding:0 1em;}
+}
+
+#breadcrumbs {
+	width:97%;
+	border-bottom: 1px dashed #ccc;
+	margin: 0 auto 0.5em;
 
 	ol {
 		padding:0;

@@ -375,21 +375,6 @@ a:active {
 #topNav ul.blueBar > li.active {
   background-color: #0f315b;
 }
-#topNav ul.blueBar > li .expandicon {
-  display: inline-block;
-  padding-right: 12px;
-  background: url("../img/expand.gif") no-repeat right center;
-}
-@media  screen and (max-width: 620px) {
-  #topNav ul.blueBar > li .expandicon {
-    position: absolute;
-    padding: 0;
-    right: 30px;
-    width: 24px;
-    height: 26px;
-    background: url("../img/expand_mobile.png") no-repeat right center;
-  }
-}
 #topNav ul.blueBar > li a {
   padding: 2px 8px 0;
   display: block;
@@ -413,7 +398,34 @@ a:active {
   #topNav ul.blueBar > li a {
     font-size: 1.2em;
     padding: 8px 0 0;
-    height: 40.5px;
+    height: 43.2px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  #topNav ul.blueBar > li a:visited {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  #topNav ul.blueBar > li a:hover,
+  #topNav ul.blueBar > li a:focus,
+  #topNav ul.blueBar > li a:active {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+#topNav ul.blueBar > li .expandicon {
+  display: inline-block;
+  padding-right: 12px;
+  background: url("../img/expand.gif") no-repeat right center;
+}
+@media  screen and (max-width: 620px) {
+  #topNav ul.blueBar > li .expandicon {
+    position: absolute;
+    padding: 0;
+    right: 30px;
+    width: 24px;
+    height: 26px;
+    background: url("../img/expand_mobile.png") no-repeat right center;
   }
 }
 #topNav ul.sub-menu {
@@ -694,12 +706,7 @@ footer #bottomBlackBar a.canLink:active {
   }
 }
 #mainContent.subpage {
-  padding: 1em 5em 5em;
-}
-@media  screen and (max-width: 620px) {
-  #mainContent.subpage {
-    padding: 1em 1em 5em;
-  }
+  padding-top: 1em;
 }
 #mainContent h1,
 #mainContent h2,
@@ -727,6 +734,7 @@ footer #bottomBlackBar a.canLink:active {
   color: #1c467a;
   border-bottom: 1px dashed #ccc;
   padding-bottom: 4px;
+  margin-top: 0.2em;
 }
 #mainContent h2 {
   font-size: 1.571em;
@@ -1043,17 +1051,83 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent .minister > div a {
   text-decoration: underline;
 }
-#mainContent #breadcrumbs {
-  width: 110%;
-  margin-left: -3em;
-  border-bottom: 1px dashed #ccc;
-  margin-bottom: 1em;
+#mainContent #sideNav {
+  width: 20%;
+  float: left;
+  padding-left: 1em;
 }
 @media  screen and (max-width: 620px) {
-  #mainContent #breadcrumbs {
-    margin-left: 0;
-    width: 100%;
+  #mainContent #sideNav {
+    display: none;
   }
+}
+#mainContent #sideNav h6 {
+  margin: 0.5em 0;
+}
+#mainContent #sideNav h6 a {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.925em;
+  width: 100%;
+  display: block;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 2px 4px;
+  background-color: #DDD;
+  color: #333333;
+  text-decoration: none;
+}
+#mainContent #sideNav h6 a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+#mainContent #sideNav h6 a:hover,
+#mainContent #sideNav h6 a:focus,
+#mainContent #sideNav h6 a:active {
+  color: #333333;
+  text-decoration: underline;
+}
+#mainContent #sideNav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 1em;
+  font-size: 0.925em;
+}
+#mainContent #sideNav ul a {
+  color: #333333;
+  text-decoration: none;
+}
+#mainContent #sideNav ul a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+#mainContent #sideNav ul a:hover,
+#mainContent #sideNav ul a:focus,
+#mainContent #sideNav ul a:active {
+  color: #cc0000;
+  text-decoration: underline;
+}
+#mainContent #sideNav ul ul {
+  margin: 2px 0 0 6px;
+  padding-left: 6px;
+  border-left: 1px solid #CCC;
+  font-size: 1em;
+}
+#mainContent #subpageContent {
+  width: 80%;
+  float: left;
+  padding: 0 3em 0 1em;
+}
+@media  screen and (max-width: 620px) {
+  #mainContent #subpageContent {
+    width: 100%;
+    padding: 0 1em;
+  }
+}
+#mainContent #breadcrumbs {
+  width: 97%;
+  border-bottom: 1px dashed #ccc;
+  margin: 0 auto 0.5em;
 }
 #mainContent #breadcrumbs ol {
   padding: 0;
@@ -1533,16 +1607,20 @@ html.ie #mainContent section {
 html.ie #mainContent section .spotlightDesc {
   padding: 0;
 }
-html.ie #mainContent.subpage {
-  width: 880px;
-  padding: 1em 40px 5em;
-}
 html.ie #breadcrumbs {
-  margin-left: -25px !important;
-  width: 930px !important;
+  width: 940px !important;
+}
+html.ie #sideNav {
+  width: 176px !important;
+  padding-left: 16px !important;
+}
+html.ie #subpageContent {
+  width: 712px !important;
+  padding: 0 40px 0 16px !important;
 }
 html.ie .twoColChart footer {
-  width: 864px !important;
+  width: 696px !important;
+  margin-top: 6px !important;
 }
 html.ie #mainContent a[href^='http://www'] {
   background: none !important;
