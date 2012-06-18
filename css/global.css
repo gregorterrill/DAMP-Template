@@ -1494,6 +1494,27 @@ footer #bottomBlackBar a.canLink:active {
   box-shadow: inset 0px 0px 5px 2px #999;
   border: 1px solid #999;
 }
+@media  screen and (max-width: 620px) {
+  #backtotop {
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+    position: fixed;
+    width: 100%;
+    background: #000;
+    opacity: 0.6%;
+    cursor: pointer;
+    top: 0px;
+  }
+  #backtotop div {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 1em;
+    color: #fff;
+  }
+}
 .inner {
   overflow: hidden;
   width: 100%;
