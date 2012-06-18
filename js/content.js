@@ -47,16 +47,8 @@
         resizeDoubleCols();
     });
 
-    // MOVE THIS LATER
-    function DetectIE7() {
-       uagent = navigator.userAgent.toLowerCase();
-       if (uagent.search("msie 7") > -1)
-           return true;
-        else
-           return false;
-    }
-    // add external link icons for IE7
-    if ( DetectIE7() ) {
+    // add multi-line external link icons for IE7
+    if ( $('html').hasClass('ie7') ) {
         $("#mainContent a[href^='http://www']").each(function() {    
             $(this).after("<span class='extLink'>&nbsp;</span>");
         });

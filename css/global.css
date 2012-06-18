@@ -202,6 +202,7 @@ a:active {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.143em;
   color: #FFF;
+  filter: shadow(Color=#333333, Direction=125, Strength=1);
   text-shadow: 1px 1px 1px #333;
   color: #ffffff;
   text-decoration: none;
@@ -1206,6 +1207,13 @@ footer #bottomBlackBar a.canLink:active {
   background: transparent url(../img/icon-email.gif) no-repeat 0 2px;
   padding-left: 19px;
 }
+#mainContent .extLink {
+  background: transparent url(../img/icon-external.gif) no-repeat;
+  width: 14px;
+  margin: 0 4px;
+  height: 18px;
+  display: inline-block;
+}
 #mainContent figure,
 #mainContent .twoColChart,
 #mainContent .box {
@@ -1514,4 +1522,11 @@ html.ie #mainContent.subpage {
 html.ie #breadcrumbs {
   margin-left: -25px !important;
   width: 930px !important;
+}
+html.ie .twoColChart footer {
+  width: 864px !important;
+}
+html.ie #mainContent a[href^='http://www'] {
+  background: none !important;
+  padding-right: 0 !important;
 }
