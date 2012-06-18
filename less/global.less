@@ -112,26 +112,23 @@ a {.linkStyle(#333,#333,underline);}
 
 	@import 'content.less';
 }
-@media @mobile{
-	#backtotop{
-		left:0;
-		right:0;
-		margin:auto;
-		display:none;
+
+#backtotop {
+	display:none;
+
+	@media @mobile {
 		position:fixed;
+		top:0;
+		left:0;
 		width:100%;
 		background:#000;
-		opacity:0.6%;
 		cursor:pointer;
-		top:0px;
-	}
-	#backtotop div{
 		font-weight:bold;
 		text-align:center;
-		padding:5px 0px;
+		padding:12px 0px;
 		font-size:1em;
 		color:#fff;
-	}	
+	}
 }
 
 // --------------------------------------------------------------------------------------------------------------------- helper classes

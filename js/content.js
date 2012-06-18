@@ -3,6 +3,15 @@
 
 (function($){
 
+    //for mobile, add back to top bar
+    if ($(window).width() <= 620) {
+        $('#backtotop').backtotop({
+            'position': 26,
+            'speed' : 0,
+            'toTop':500
+        });
+    }
+
     function resizeDoubleCols() {
     	//resize all double columns with sep. headings
     	$('.doubleBox').each(function(){
