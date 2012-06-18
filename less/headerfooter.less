@@ -50,6 +50,7 @@
 		float:left;
 		font-size:0.925em;
 		@media @tablet {margin:0 0 8px 0; width:100%;}
+		@media @micro {font-size:0.85em;}
 
 		li {
 			float:left;
@@ -95,7 +96,7 @@
 #canWordmark {
 	float:right;
 	margin:36px 4px 4px;
-	.hideFor('mobile');
+	@media @mobile {display:none;}
 }
 
 // --------------------------------------------------------------------------------------------------------------------- google search and nav styles

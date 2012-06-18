@@ -174,6 +174,11 @@ a:active {
     width: 100%;
   }
 }
+@media  screen and (max-width: 379px) {
+  #topBlackBar .topSiteNav ul {
+    font-size: 0.85em;
+  }
+}
 #topBlackBar .topSiteNav ul li {
   float: left;
   color: #FFF;
@@ -230,7 +235,7 @@ a:active {
 }
 @media  screen and (max-width: 620px) {
   #canWordmark {
-    display: none !important;
+    display: none;
   }
 }
 #search {
@@ -695,18 +700,15 @@ footer #bottomBlackBar a.canLink:active {
   border-top: 4px solid #CCC;
   border-left: 1px solid #AAA;
   border-right: 1px solid #AAA;
-  padding: 0 0 5em;
   min-height: 600px;
   background: url("../img/bg_mainContainer.png") top center repeat-x #ffffff;
+  padding: 0 0 5em;
 }
 @media  screen and (max-width: 620px) {
   #mainContent {
     position: relative;
     top: -1px;
   }
-}
-#mainContent.subpage {
-  padding-top: 1em;
 }
 #mainContent h1,
 #mainContent h2,
@@ -1127,7 +1129,7 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent #breadcrumbs {
   width: 97%;
   border-bottom: 1px dashed #ccc;
-  margin: 0 auto 0.5em;
+  margin: 0.7em auto 0.5em;
 }
 #mainContent #breadcrumbs ol {
   padding: 0;
@@ -1601,9 +1603,7 @@ html.ie .inner {
   width: 960px;
   margin: auto;
 }
-html.ie #mainContent section {
-  padding: 0;
-}
+html.ie #mainContent section,
 html.ie #mainContent section .spotlightDesc {
   padding: 0;
 }

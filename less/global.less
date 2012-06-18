@@ -18,6 +18,7 @@
 @tablet: ~" screen and (max-width: 976px)";		//960 + 16px for scrollbar
 @midway: ~" screen and (max-width: 768px)";		//roughly halfway
 @mobile: ~" screen and (max-width: 620px)";		//good golly, phones are getting big these days
+@micro: ~" screen and (max-width: 379px)";		//for bob's dumb phone
 
 // --------------------------------------------------------------------------------------------------------------------- global site variables
 @navBG: #146094;
@@ -34,12 +35,6 @@
 @sans2: Arial, Helvetica, sans-serif;
 
 // --------------------------------------------------------------------------------------------------------------------- LESS mix-ins
-
-.hideFor (@screenType) {
-	@media @@screenType {
-		display:none !important;
-	}
-}
 
 .linkStyle (@normalColor, @hoverColor, @hoverDeco:none, @normalDeco:none) {
 	color: @normalColor;
@@ -93,19 +88,16 @@ a {.linkStyle(#333,#333,underline);}
 
 @import 'headerfooter.less';	//everything NOT IN mainContent
 
-
 // --------------------------------------------------------------------------------------------------------------------- main content box style
 #mainContent {
 	border-top:4px solid #CCC;
 	border-left:1px solid #AAA; 
 	border-right:1px solid #AAA;
-	padding: 0 0 5em; //bottom padding ensures content doesn't clip footer transition
 	min-height:600px;
 	background: url("../img/bg_mainContainer.png") top center repeat-x #FFF;
-
-	@media @mobile {position:relative; top:-1px;}
+	padding: 0 0 5em; //bottom padding ensures content doesn't clip footer transition
 	
-	&.subpage {padding-top: 1em;}
+	@media @mobile {position:relative; top:-1px;}
 
 	@import 'content.less';
 }
@@ -141,8 +133,7 @@ a {.linkStyle(#333,#333,underline);}
 // --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
 html.ie {
 	.inner {width:960px; margin:auto;}
-	#mainContent section {padding:0;}
-	#mainContent section .spotlightDesc {padding:0;}
+	#mainContent section, #mainContent section .spotlightDesc {padding:0;}
 	// imported styles from content.less require !important to overwrite
 	#breadcrumbs {width:940px !important;}
 	#sideNav {width:176px !important; padding-left: 16px !important;} //total 192px
