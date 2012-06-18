@@ -21,7 +21,7 @@
 	};
 
 	//escape
-	$(".blueBar").bind('keydown',function(event) {
+	$(".blueBar").on('keydown',function(event) {
 		if ( event.keyCode == key.esc ) {
 			event.preventDefault();
 			$(this).find('a:focus').blur();
@@ -29,10 +29,8 @@
 		}
 	});
 
-	//TODO: when you start using the arrow keys, the top-level items don't stay active dark color - fix this
-
 	//top level keypresses
-	$(".blueBar > li > a").bind('keydown',function(event) {
+	$(".blueBar > li > a").on('keydown',function(event) {
 
 		if ( event.keyCode == key.left ) {
 			event.preventDefault();
@@ -51,7 +49,7 @@
 	});
 
 	//sub-menu keypresses
-	$(".sub-menu a").bind('keydown',function(event) {
+	$(".sub-menu a").on('keydown',function(event) {
 
 		if ( event.keyCode == key.left ) {
 			event.preventDefault();
@@ -107,8 +105,8 @@
 			});
 		});
 
-		// tab out of a top level item with no sub-menu
-		$('.blueBar').on('focusout', function() {
+		// tab out of last top level item with no sub-menu
+		$('#mainContent').on('focusin', function() {
 			$('.blueBar > li').removeClass('active');
 		});
 
