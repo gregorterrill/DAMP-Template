@@ -1610,8 +1610,11 @@ html.ie #mainContent section,
 html.ie #mainContent section .spotlightDesc {
   padding: 0;
 }
+html.ie #search {
+  height: 32px !important;
+}
 html.ie input.gsc-input {
-  width: 200px;
+  width: 200px !important;
 }
 html.ie #breadcrumbs {
   width: 940px !important;

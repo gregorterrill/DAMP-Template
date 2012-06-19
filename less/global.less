@@ -134,11 +134,12 @@ a {.linkStyle(#333,#333,underline);}
 html.ie {
 	.inner {width:960px; margin:auto;}
 	#mainContent section, #mainContent section .spotlightDesc {padding:0;}
-	// imported styles from content.less require !important to overwrite
-	input.gsc-input {width:200px;}
+	// NOTE: imported styles from other .less files seem to require !important to overwrite
+	#search {height:32px !important;} //44px - 12px vertical padding
+	input.gsc-input {width:200px !important;}
 	#breadcrumbs {width:940px !important;}
 	#sideNav {width:176px !important; padding-left: 16px !important;} //total 192px
 	#subpageContent {width:712px !important; padding: 0 40px 0 16px !important;} //total 768px
 	.twoColChart footer {width: 696px !important; margin-top:6px !important;} //712px - 16px for padding
-	#mainContent a[href^='http://www']{background:none !important;padding-right:0 !important;} // IE7 adds this icon via JS
+	#mainContent a[href^='http://www']{background:none !important; padding-right:0 !important;} // removed as IE7 adds this icon via JS
 }

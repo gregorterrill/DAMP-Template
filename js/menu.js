@@ -129,10 +129,15 @@
 		$('.blueBar > li').on('click', function(e) {	
 			$('.sub-menu:visible').slideUp(100);	
 			$(this).siblings().removeClass('active');	
-			// on first tap, open the menu. on second tap, follow the top-level link
+			// on first tap, just open the menu instead of following the link
 			if (!$(this).hasClass('active')) {
 				e.preventDefault();
 				$(this).addClass('active').children('.sub-menu').slideDown(100);
+			//if you clicked the expand icon (a span), close the menu instead of following the link
+			} else if (e.target.nodeName == 'SPAN') {
+				e.preventDefault();
+				$('.sub-menu:visible').slideUp(100);
+				$('.active').removeClass('active');
 			}
 		});
 	}
