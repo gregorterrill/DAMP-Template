@@ -4,10 +4,14 @@
 (function($){
 
 // --------------------------------------------------------------------------------------------------------------------- add dropdown arrows
-	$('.sub-menu').each(function() {
-		$(this).prev().append('<span class="expandicon">&nbsp;</span>');
-	});
-
+	
+	var addExpandIcons = function() {
+		$('.sub-menu').each(function() {
+			$(this).prev().append('<span class="expandicon">&nbsp;</span>');
+		});
+	};
+	addExpandIcons();
+	
 // --------------------------------------------------------------------------------------------------------------------- keyboard events
 
 	//key index
@@ -141,5 +145,25 @@
 			}
 		});
 	}
+
+// --------------------------------------------------------------------------------------------------------------------- side nav for subpages
+	$('#siteHeader').on('click', function(e) {
+		$('#sideNav').toggleClass('menuOpen');
+	});
+
+	//toggle menu level
+	$('.navLevelToggle').on('click',function(e) {
+		$('.expandicon').hide();
+		var list = $(this).parents('ul');
+		list.animate({
+      		marginRight: (parseInt(list.css('margin-right'),10) == 0) ? list.outerWidth() : 0
+        }, function() {
+            list.hide().siblings().eq(0).css('margin-right','0').fadeIn();
+            addExpandIcons();
+		});
+	});
+
+	//populate sideNav from subNav
+	$('ul.subNav').clone().removeClass('blueBar').prependTo('#sideNav').find('ul').removeClass('sub-menu');
 
 })(jQuery);

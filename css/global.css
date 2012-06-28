@@ -349,6 +349,11 @@ a:active {
     border-bottom: 1px solid #A2B4C8;
   }
 }
+@media  screen and (max-width: 620px) {
+  #topNav .siteNav {
+    display: none;
+  }
+}
 #topNav ul.blueBar {
   list-style-type: none;
   color: #FFF;
@@ -391,6 +396,7 @@ a:active {
   font-size: 0.925em;
   color: #ffffff;
   text-decoration: none;
+  white-space: nowrap;
 }
 #topNav ul.blueBar > li a:visited {
   color: #ffffff;
@@ -419,6 +425,15 @@ a:active {
   #topNav ul.blueBar > li a:active {
     color: #ffffff;
     text-decoration: none;
+  }
+}
+#topNav ul.blueBar > li ul ul a {
+  font-weight: normal;
+}
+@media  screen and (max-width: 620px) {
+  #topNav ul.blueBar > li ul ul a {
+    font-size: 1em;
+    padding-top: 10px;
   }
 }
 #topNav ul.blueBar > li .expandicon {
@@ -472,6 +487,14 @@ a:active {
 #topNav ul.sub-menu a:hover,
 #topNav ul.sub-menu a:active {
   background-color: #15598f;
+}
+#topNav .subNav {
+  display: none;
+}
+@media  screen and (max-width: 620px) {
+  #topNav .subNav {
+    display: block;
+  }
 }
 footer {
   position: relative;
@@ -793,6 +816,34 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent a img {
   border: none;
 }
+#mainContent .jshowoff {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+@media  screen and (max-width: 620px) {
+  #mainContent .jshowoff {
+    height: auto;
+  }
+}
+#mainContent .jshowoff-controls {
+  width: 100%;
+  background: #EEE;
+  border-bottom: 1px solid #AAA;
+  border-top: 1px solid #AAA;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+#mainContent .jshowoff-controls a {
+  display: block;
+  text-align: center;
+  padding: 4px 20px;
+  border-right: 1px solid #AAA;
+  float: left;
+}
 #mainContent .spotlight {
   display: inline;
   float: left;
@@ -800,44 +851,21 @@ footer #bottomBlackBar a.canLink:active {
   margin: 0 0%;
   *width: 99.94791666666667%;
   *margin: 0 -0.052083333333333336%;
-  border-bottom: 1px solid #AAA;
 }
-#mainContent .spotlight img {
-  display: inline;
-  float: left;
-  width: 41.66666666666667%;
-  margin: 0 0%;
-  *width: 41.614583333333336%;
-  *margin: 0 -0.052083333333333336%;
-}
-@media  screen and (max-width: 976px) {
-  #mainContent .spotlight img {
-    display: inline;
-    float: left;
-    width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
-  }
-}
-@media  screen and (max-width: 620px) {
-  #mainContent .spotlight img {
-    display: inline;
-    float: left;
-    width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
-  }
+#mainContent .spotlight img,
+#mainContent .spotlight h2 {
+  padding: 0;
+  margin: 0;
 }
 #mainContent .spotlight .spotlightDesc {
-  padding: 0 2em 1em;
+  padding: 1.5em 2em 1em;
   display: inline;
   float: left;
-  width: 58.333333333333336%;
+  width: 33.33333333333333%;
   margin: 0 0%;
-  *width: 58.28125%;
+  *width: 33.28124999999999%;
   *margin: 0 -0.052083333333333336%;
+  height: 300px;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .spotlight .spotlightDesc {
@@ -857,16 +885,54 @@ footer #bottomBlackBar a.canLink:active {
     margin: 0 0%;
     *width: 99.94791666666667%;
     *margin: 0 -0.052083333333333336%;
+    height: auto;
   }
+}
+#mainContent .spotlight .spotlightImg {
+  border-left: 1px solid #AAA;
+  overflow: hidden;
+  display: inline;
+  float: left;
+  width: 66.66666666666666%;
+  margin: 0 0%;
+  *width: 66.61458333333333%;
+  *margin: 0 -0.052083333333333336%;
+  height: 300px;
+}
+@media  screen and (max-width: 976px) {
+  #mainContent .spotlight .spotlightImg {
+    display: inline;
+    float: left;
+    width: 50%;
+    margin: 0 0%;
+    *width: 49.947916666666664%;
+    *margin: 0 -0.052083333333333336%;
+  }
+}
+@media  screen and (max-width: 620px) {
+  #mainContent .spotlight .spotlightImg {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin: 0 0%;
+    *width: 99.94791666666667%;
+    *margin: 0 -0.052083333333333336%;
+    border-top: 1px solid #AAA;
+    border-left: none;
+  }
+}
+#mainContent .spotlight .spotlightImg img {
+  height: 300px;
+  min-width: 100%;
 }
 #mainContent .headlines {
   display: inline;
   float: left;
-  width: 41.66666666666667%;
+  width: 33.33333333333333%;
   margin: 0 0%;
-  *width: 41.614583333333336%;
+  *width: 33.28124999999999%;
   *margin: 0 -0.052083333333333336%;
-  padding: 0 0.8em;
+  padding: 0 1em 0 2em;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .headlines {
@@ -896,7 +962,7 @@ footer #bottomBlackBar a.canLink:active {
   margin: 0 0%;
   *width: 33.28124999999999%;
   *margin: 0 -0.052083333333333336%;
-  padding: 0 0.8em;
+  padding: 0 1em;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .features {
@@ -922,11 +988,11 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent .dept {
   display: inline;
   float: left;
-  width: 25%;
+  width: 33.33333333333333%;
   margin: 0 0%;
-  *width: 24.947916666666668%;
+  *width: 33.28124999999999%;
   *margin: 0 -0.052083333333333336%;
-  padding: 0 0.8em;
+  padding: 0 2em 0 1em;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .dept {
@@ -1066,31 +1132,8 @@ footer #bottomBlackBar a.canLink:active {
     display: none;
   }
 }
-#mainContent #sideNav h6 {
+#mainContent #sideNav li {
   margin: 0.5em 0;
-}
-#mainContent #sideNav h6 a {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 0.925em;
-  width: 100%;
-  display: block;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  padding: 2px 4px;
-  background-color: #DDD;
-  color: #333333;
-  text-decoration: none;
-}
-#mainContent #sideNav h6 a:visited {
-  color: #333333;
-  text-decoration: none;
-}
-#mainContent #sideNav h6 a:hover,
-#mainContent #sideNav h6 a:focus,
-#mainContent #sideNav h6 a:active {
-  color: #333333;
-  text-decoration: underline;
 }
 #mainContent #sideNav ul {
   list-style-type: none;
@@ -1099,8 +1142,10 @@ footer #bottomBlackBar a.canLink:active {
   font-size: 0.925em;
 }
 #mainContent #sideNav ul a {
+  display: block;
   color: #333333;
   text-decoration: none;
+  width: 100%;
 }
 #mainContent #sideNav ul a:visited {
   color: #333333;
@@ -1112,11 +1157,23 @@ footer #bottomBlackBar a.canLink:active {
   color: #cc0000;
   text-decoration: underline;
 }
-#mainContent #sideNav ul ul {
+#mainContent #sideNav ul ul ul {
   margin: 2px 0 0 6px;
   padding-left: 6px;
   border-left: 1px solid #CCC;
   font-size: 1em;
+}
+#mainContent #sideNav > ul > li > a {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.925em;
+  width: 100%;
+  display: block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background-color: #EEE;
+  border: 1px solid #AAA;
 }
 #mainContent #subpageContent {
   width: 80%;
@@ -1379,12 +1436,13 @@ footer #bottomBlackBar a.canLink:active {
   max-width: 100%;
 }
 #mainContent figure figcaption {
+  display: block;
+  width: 100%;
   border-top: 1px solid #fff;
   background-color: #eee;
   padding: 8px;
   font-size: 0.825em;
   line-height: 1.3em;
-  max-width: 100%;
 }
 #mainContent .twoColChart figure {
   overflow: hidden;
@@ -1600,6 +1658,14 @@ footer #bottomBlackBar a.canLink:active {
 @media  screen and (max-width: 976px) {
   .inner {
     padding: 0 12px;
+  }
+}
+.navLevelToggle {
+  display: none !important;
+}
+@media  screen and (max-width: 620px) {
+  .navLevelToggle {
+    display: block !important;
   }
 }
 html.ie .inner {

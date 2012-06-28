@@ -166,6 +166,7 @@
 	overflow:visible;
 
 	@media @mobile {border-bottom:1px solid #A2B4C8;}
+	.siteNav {@media @mobile {display:none;}}
 
 	ul.blueBar {
 		list-style-type:none;
@@ -204,12 +205,21 @@
 				font-weight:bold;
 				font-size:0.925em;
 				.linkStyle(#FFF,#FFF,underline);
+				white-space:nowrap;
 
 				@media @mobile {
 					font-size:1.2em;
 					padding: 8px 0 0;
 					height:@topNavItemHeight*1.6;
 					.linkStyle(#FFF,#FFF,none);
+				}
+			}
+
+			ul ul a {
+				font-weight:normal;
+				@media @mobile {
+					font-size:1em;
+					padding-top:10px;
 				}
 			}
 
@@ -261,8 +271,12 @@
 			padding: 0 8px;
 			&:focus, &:hover, &:active { background-color: @navMed;}
 		}
-
 	}
+
+	.subNav {
+		display:none;
+		@media @mobile {display:block;}
+	} 
 }
 
 // --------------------------------------------------------------------------------------------------------------------- footer styles

@@ -120,15 +120,49 @@
 	<div id="mainContent" class="inner">
 
 		<section class="spotlight">
-			<img src="img/spotlight/apr007.jpg" alt="News Photo" />
-			<div class="spotlightDesc">
-				<h2>In the Spotlight</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
-				<a href="#">Photo Gallery</a>
+
+			<div class="spotlightItem">
+				<div class="spotlightDesc">
+					<h2>News Item 1</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<a href="#">Photo Gallery</a>
+				</div>
+				<div class="spotlightImg">
+					<img src="img/spotlight/apr007.jpg" alt="News Photo" />
+				</div>
 			</div>
+
+			<div class="spotlightItem">
+				<div class="spotlightDesc">
+					<h2>News Item 2</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<a href="#">Learn More</a>
+				</div>
+				<div class="spotlightImg">
+					<img src="img/spotlight/ne-2012-06-26.jpg" alt="News Photo" />
+				</div>
+			</div>
+
+			<div class="spotlightItem">
+				<div class="spotlightDesc">
+					<h2>News Item 3</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<a href="#">See the Brochure</a>
+				</div>
+				<div class="spotlightImg">
+					<img src="img/spotlight/ne-2012-06-21.jpg" alt="News Photo" />
+				</div>
+			</div>
+
 		</section>
 
 		<section class="headlines">
@@ -259,6 +293,18 @@
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
 <script src="js/menu.js"></script>
+<script src="js/jshowoff.js"></script>
+
+<script type="text/javascript">
+	$('.spotlight').jshowoff({ 
+		speed:5000,
+		animatePause:false,
+		hoverPause:false,
+		links:false,
+		controlText: { play:'Play', pause:'Pause', previous:'Previous', next:'Next' }
+		//controlText: { play:'Jouer', pause:'Pause', previous:'Précédent', next:'Suivant' }
+	}); 
+</script>
 
 <script src="http://www.google.com/jsapi"></script>
 <script>window['google'] || document.write('<script src="js/libs/jsapi.js"><\/script>') </script>

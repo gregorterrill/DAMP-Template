@@ -54,6 +54,12 @@
     $(window).on("debouncedresize", function() { 
         resizeDoubleCharts();
         resizeDoubleCols();
+
+        //ensure large screen never shows subnav in blue bar
+        if ( ($('.blueBar.subNav:visible').length != 0) && ($(window).width() >= 620) ) {
+            $('.blueBar.subNav').hide();
+            $('.siteNav').show().css('margin-right',0);
+        }
     });
 
     // add multi-line external link icons for IE7
