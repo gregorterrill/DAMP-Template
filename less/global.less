@@ -1,8 +1,8 @@
 // --------------------------------------------------------------------------------------------------------------------- import semantic grid system
-@import 'semanticgrid.less';
-@columns: 12;
-@gutter-width: 0;
-@total-width: 100%;
+//@import 'semanticgrid.less';
+//@columns: 12;
+//@gutter-width: 0;
+//@total-width: 100%;
 
 // --------------------------------------------------------------------------------------------------------------------- use the better box model
 * {
@@ -82,8 +82,15 @@ html, body {
 	padding:0; 
 	font:14px/21px @sans1;
 }
-body {position:relative;z-index:0;}
-ul {margin:0; padding:0;}
+body {
+	position:relative;
+	z-index:0; 
+	.clearfix;
+}
+ul {
+	margin:0; 
+	padding:0;
+}
 a {.linkStyle(#333,#333,underline);}
 
 @import 'headerfooter.less';	//everything NOT IN mainContent
@@ -130,6 +137,13 @@ a {.linkStyle(#333,#333,underline);}
 	@media @tablet {padding:0 12px;}
 }
 
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+	*zoom:1;
+	&:before, &:after {content:""; display:table;}
+	&:after {clear:both;}
+}
+
 .navLevelToggle {
 	display:none !important;
 	@media @mobile {display:block !important;}
@@ -138,7 +152,9 @@ a {.linkStyle(#333,#333,underline);}
 // --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
 html.ie {
 	.inner {width:960px; margin:auto;}
+
 	#mainContent section, #mainContent section .spotlightDesc {padding:0;}
+
 	// NOTE: imported styles from other .less files seem to require !important to overwrite
 	#search {height:32px !important;} //44px - 12px vertical padding
 	input.gsc-input {width:200px !important;}

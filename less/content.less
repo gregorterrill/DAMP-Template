@@ -54,27 +54,29 @@ a {
 	bottom:0;
 	margin:0;
 
-	a {display:block; text-align:center; padding: 4px 20px; border-right: 1px solid #AAA; float:left;}
+	a {display:block; text-align:center; padding: 4px 0; border-right: 1px solid #AAA; float:left; width:100px;}
 }
 .spotlight {
-	.column(12);
+	width:100%;
 
 	img,h2 {padding:0;margin:0;}
 	
 	.spotlightDesc {
 		padding: 1.5em 2em 1em;
-		.column(4);
+		width:33.34%;
+		float:left;
 		height: @spotlightHeight;
-		@media @tablet {.column(6);}
-		@media @mobile {.column(12); height:auto;}
+		@media @tablet {width:50%;}
+		@media @mobile {width:100%; height:auto;}
 	}
 	.spotlightImg {
 		border-left:1px solid #AAA;
 		overflow:hidden;
-		.column(8);
+		width:66.66%;
+		float:left;
 		height: @spotlightHeight;
-		@media @tablet {.column(6);}
-		@media @mobile {.column(12); border-top:1px solid #AAA; border-left:none;}
+		@media @tablet {width:50%;}
+		@media @mobile {width:100%; border-top:1px solid #AAA; border-left:none;}
 
 		img {
 			height:@spotlightHeight; 
@@ -86,62 +88,70 @@ a {
 
 
 .headlines {
-	.column(4);
+	width:35%;
+	float:left;
 	padding:0 1em 0 2em;
 	@media @tablet {
-		.column(6);
+		width:50%;
 		padding:0 2em;
 	}
 	@media @mobile {
-		.column(12);
+		width:100%;
 	}
 }
 
 .features {
-	.column(4);
+	width:35%;
+	float:left;
 	padding:0 1em;
 	@media @tablet {
-		.column(6);
+		width:50%;
 		padding:0 2em;
 	}
 	@media @mobile {
-		.column(12);
+		width:100%;
 	}
 }
 
 .dept {
-	.column(4);
+	width:30%;
+	float:left;
 	padding:0 2em 0 1em;
 	@media @tablet {
-		.column(12);
+		width:100%;
 		padding:0;	
 	}
 
 	.priorities {
+		width:100%;
+		float:left;
 
 		@media @tablet {
-			.column(8);
+			width:66.66%;
 			padding:0 2em;
 		}
 		@media @midway {
-			.column(6);
+			width:50%;
 		}
 		@media @mobile {
-			.column(12);
+			width:100%;
 		}
 	}
 
 	.minister {
+		width:100%;
+		float:left;
+
 		@media @tablet {
-			.column(4);
+			width:33.34%;
 			padding:0 2em 0 0;
 		}
 		@media @midway {
-			.column(6);
+			width:50%;
 			padding:0 2em;
 		}
 		@media @mobile {
-			.column(12);
+			width:100%;
 		}
 	}
 }

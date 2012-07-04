@@ -318,7 +318,7 @@ footer {
 	}
 
 	#deptFooter {
-		.column(12);
+		width:100%;
 		background-color:#EFEFEF;
 		font-family: @sans2;
 		font-size:0.925em;
@@ -333,11 +333,12 @@ footer {
 		}
 
 		ul.inner > li {
-			.column(3);
+			width:25%;
+			float:left;
 			margin: 0 0 12px;
 
 			@media @mobile {
-				.column(6);
+				width:50%;
 				margin: 0 0 12px;
 			}
 		}

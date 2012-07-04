@@ -1,15 +1,3 @@
-body {
-  width: 100%;
-  *zoom: 1;
-}
-body:before,
-body:after {
-  content: "";
-  display: table;
-}
-body:after {
-  clear: both;
-}
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -84,6 +72,15 @@ body {
 body {
   position: relative;
   z-index: 0;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
 }
 ul {
   margin: 0;
@@ -558,12 +555,7 @@ footer #footerDivider #dateModified {
   }
 }
 footer #deptFooter {
-  display: inline;
-  float: left;
   width: 100%;
-  margin: 0 0%;
-  *width: 99.94791666666667%;
-  *margin: 0 -0.052083333333333336%;
   background-color: #EFEFEF;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.925em;
@@ -587,22 +579,13 @@ footer #deptFooter ul {
   list-style-type: none;
 }
 footer #deptFooter ul.inner > li {
-  display: inline;
-  float: left;
   width: 25%;
-  margin: 0 0%;
-  *width: 24.947916666666668%;
-  *margin: 0 -0.052083333333333336%;
+  float: left;
   margin: 0 0 12px;
 }
 @media  screen and (max-width: 620px) {
   footer #deptFooter ul.inner > li {
-    display: inline;
-    float: left;
     width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
     margin: 0 0 12px;
   }
 }
@@ -840,17 +823,13 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent .jshowoff-controls a {
   display: block;
   text-align: center;
-  padding: 4px 20px;
+  padding: 4px 0;
   border-right: 1px solid #AAA;
   float: left;
+  width: 100px;
 }
 #mainContent .spotlight {
-  display: inline;
-  float: left;
   width: 100%;
-  margin: 0 0%;
-  *width: 99.94791666666667%;
-  *margin: 0 -0.052083333333333336%;
 }
 #mainContent .spotlight img,
 #mainContent .spotlight h2 {
@@ -859,64 +838,36 @@ footer #bottomBlackBar a.canLink:active {
 }
 #mainContent .spotlight .spotlightDesc {
   padding: 1.5em 2em 1em;
-  display: inline;
+  width: 33.34%;
   float: left;
-  width: 33.33333333333333%;
-  margin: 0 0%;
-  *width: 33.28124999999999%;
-  *margin: 0 -0.052083333333333336%;
   height: 300px;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .spotlight .spotlightDesc {
-    display: inline;
-    float: left;
     width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
   }
 }
 @media  screen and (max-width: 620px) {
   #mainContent .spotlight .spotlightDesc {
-    display: inline;
-    float: left;
     width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
     height: auto;
   }
 }
 #mainContent .spotlight .spotlightImg {
   border-left: 1px solid #AAA;
   overflow: hidden;
-  display: inline;
+  width: 66.66%;
   float: left;
-  width: 66.66666666666666%;
-  margin: 0 0%;
-  *width: 66.61458333333333%;
-  *margin: 0 -0.052083333333333336%;
   height: 300px;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .spotlight .spotlightImg {
-    display: inline;
-    float: left;
     width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
   }
 }
 @media  screen and (max-width: 620px) {
   #mainContent .spotlight .spotlightImg {
-    display: inline;
-    float: left;
     width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
     border-top: 1px solid #AAA;
     border-left: none;
   }
@@ -926,146 +877,87 @@ footer #bottomBlackBar a.canLink:active {
   min-width: 100%;
 }
 #mainContent .headlines {
-  display: inline;
+  width: 35%;
   float: left;
-  width: 33.33333333333333%;
-  margin: 0 0%;
-  *width: 33.28124999999999%;
-  *margin: 0 -0.052083333333333336%;
   padding: 0 1em 0 2em;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .headlines {
-    display: inline;
-    float: left;
     width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
     padding: 0 2em;
   }
 }
 @media  screen and (max-width: 620px) {
   #mainContent .headlines {
-    display: inline;
-    float: left;
     width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
   }
 }
 #mainContent .features {
-  display: inline;
+  width: 35%;
   float: left;
-  width: 33.33333333333333%;
-  margin: 0 0%;
-  *width: 33.28124999999999%;
-  *margin: 0 -0.052083333333333336%;
   padding: 0 1em;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .features {
-    display: inline;
-    float: left;
     width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
     padding: 0 2em;
   }
 }
 @media  screen and (max-width: 620px) {
   #mainContent .features {
-    display: inline;
-    float: left;
     width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
   }
 }
 #mainContent .dept {
-  display: inline;
+  width: 30%;
   float: left;
-  width: 33.33333333333333%;
-  margin: 0 0%;
-  *width: 33.28124999999999%;
-  *margin: 0 -0.052083333333333336%;
   padding: 0 2em 0 1em;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .dept {
-    display: inline;
-    float: left;
     width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
     padding: 0;
   }
 }
+#mainContent .dept .priorities {
+  width: 100%;
+  float: left;
+}
 @media  screen and (max-width: 976px) {
   #mainContent .dept .priorities {
-    display: inline;
-    float: left;
-    width: 66.66666666666666%;
-    margin: 0 0%;
-    *width: 66.61458333333333%;
-    *margin: 0 -0.052083333333333336%;
+    width: 66.66%;
     padding: 0 2em;
   }
 }
 @media  screen and (max-width: 768px) {
   #mainContent .dept .priorities {
-    display: inline;
-    float: left;
     width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
   }
 }
 @media  screen and (max-width: 620px) {
   #mainContent .dept .priorities {
-    display: inline;
-    float: left;
     width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
   }
+}
+#mainContent .dept .minister {
+  width: 100%;
+  float: left;
 }
 @media  screen and (max-width: 976px) {
   #mainContent .dept .minister {
-    display: inline;
-    float: left;
-    width: 33.33333333333333%;
-    margin: 0 0%;
-    *width: 33.28124999999999%;
-    *margin: 0 -0.052083333333333336%;
+    width: 33.34%;
     padding: 0 2em 0 0;
   }
 }
 @media  screen and (max-width: 768px) {
   #mainContent .dept .minister {
-    display: inline;
-    float: left;
     width: 50%;
-    margin: 0 0%;
-    *width: 49.947916666666664%;
-    *margin: 0 -0.052083333333333336%;
     padding: 0 2em;
   }
 }
 @media  screen and (max-width: 620px) {
   #mainContent .dept .minister {
-    display: inline;
-    float: left;
     width: 100%;
-    margin: 0 0%;
-    *width: 99.94791666666667%;
-    *margin: 0 -0.052083333333333336%;
   }
 }
 #mainContent .minister > div {
@@ -1659,6 +1551,17 @@ footer #bottomBlackBar a.canLink:active {
   .inner {
     padding: 0 12px;
   }
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 .navLevelToggle {
   display: none !important;
