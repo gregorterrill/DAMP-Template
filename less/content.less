@@ -39,7 +39,7 @@ a {
 
 .jshowoff {
 	height:@spotlightHeight;
-	position:relative;
+	//position:relative;
 	overflow:hidden;
 	margin-bottom:1em;
 	@media @mobile {height:auto;}
@@ -81,6 +81,8 @@ a {
 		img {
 			height:@spotlightHeight; 
 			min-width:100%;
+			
+			&.rightFocus {@media @tablet {float:right;}}
 		}
 	}
 }

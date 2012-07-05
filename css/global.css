@@ -801,7 +801,6 @@ footer #bottomBlackBar a.canLink:active {
 }
 #mainContent .jshowoff {
   height: 300px;
-  position: relative;
   overflow: hidden;
   margin-bottom: 1em;
 }
@@ -875,6 +874,11 @@ footer #bottomBlackBar a.canLink:active {
 #mainContent .spotlight .spotlightImg img {
   height: 300px;
   min-width: 100%;
+}
+@media  screen and (max-width: 976px) {
+  #mainContent .spotlight .spotlightImg img.rightFocus {
+    float: right;
+  }
 }
 #mainContent .headlines {
   width: 35%;
@@ -1589,13 +1593,15 @@ html.ie #breadcrumbs {
   width: 940px !important;
 }
 html.ie #sideNav {
-  width: 176px !important;
-  padding-left: 16px !important;
+  width: 184px !important;
+  padding: 0 8px 0 0 !important;
+  margin-top: -24px !important;
 }
 html.ie #subpageContent {
   width: 712px !important;
   padding: 0 40px 0 16px !important;
 }
+html.ie figcaption,
 html.ie .twoColChart footer {
   width: 696px !important;
   margin-top: 6px !important;
@@ -1603,4 +1609,30 @@ html.ie .twoColChart footer {
 html.ie #mainContent a[href^='http://www'] {
   background: none !important;
   padding-right: 0 !important;
+}
+html.ie .spotlightDesc {
+  width: 327px !important;
+  padding: 1em 16px 0 !important;
+  height: 284px !important;
+}
+html.ie .spotlightImg {
+  width: 600px !important;
+  height: 300px !important;
+}
+html.ie .jshowoff,
+html.ie .jshowoff-controls,
+html.ie .spotlight {
+  position: static !important;
+  width: 960px !important;
+  height: auto !important;
+  overflow: auto !important;
+}
+html.ie .features,
+html.ie .headlines {
+  width: 304px !important;
+  padding: 0 16px !important;
+}
+html.ie .dept {
+  width: 256px !important;
+  padding: 0 16px !important;
 }

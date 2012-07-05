@@ -159,8 +159,14 @@ html.ie {
 	#search {height:32px !important;} //44px - 12px vertical padding
 	input.gsc-input {width:200px !important;}
 	#breadcrumbs {width:940px !important;}
-	#sideNav {width:176px !important; padding-left: 16px !important;} //total 192px
+	#sideNav {width:184px !important; padding: 0 8px 0 0 !important; margin-top:-24px !important;} //total 192px, top margin is to offset hidden subnav toggle
 	#subpageContent {width:712px !important; padding: 0 40px 0 16px !important;} //total 768px
-	.twoColChart footer {width: 696px !important; margin-top:6px !important;} //712px - 16px for padding
+	figcaption, .twoColChart footer {width: 696px !important; margin-top:6px !important;} //712px - 16px for padding
 	#mainContent a[href^='http://www']{background:none !important; padding-right:0 !important;} // removed as IE7 adds this icon via JS
+	.spotlightDesc {width: 327px !important; padding: 1em 16px 0 !important; height:284px !important;} //360px - 1px for border - 32px for padding
+	.spotlightImg {width: 600px !important; height:300px !important;}
+	.jshowoff, .jshowoff-controls, .spotlight {position:static !important; width:960px !important; height:auto !important; overflow:auto !important;}
+	.features, .headlines {width:304px !important; padding: 0 16px !important;}
+	.dept {width:256px !important; padding: 0 16px !important;}
+
 }
