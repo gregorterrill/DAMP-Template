@@ -33,6 +33,51 @@ a {
 	img {border:none;} //IE fix
 }
 
+// --------------------------------------------------------------------------------------------------------------------- grid system
+
+// NOTE: the elements you apply these classes two CANNOT have left/right borders or padding or everything will break in IE7
+// since it doesn't support box-sizing:border-box. A workaround is to wrap all the inside content of the element inside a div 
+// and apply your padding to that. Alternatively, apply your padding to all individual internal elements.
+
+.col-12 {.column(12);}
+.col-11 {.column(11);}
+.col-10 {.column(10);}
+.col-9  {.column(9);}
+.col-8  {.column(8);}
+.col-7  {.column(7);}
+.col-6  {.column(6);}
+.col-5  {.column(5);}
+.col-4  {.column(4);}
+.col-3  {.column(3);}
+.col-2  {.column(2);}
+.col-1  {.column(1);}
+
+.push-12 {.push(12);}
+.push-11 {.push(11);}
+.push-10 {.push(10);}
+.push-9  {.push(9);}
+.push-8  {.push(8);}
+.push-7  {.push(7);}
+.push-6  {.push(6);}
+.push-5  {.push(5);}
+.push-4  {.push(4);}
+.push-3  {.push(3);}
+.push-2  {.push(2);}
+.push-1  {.push(1);}
+
+.pull-12 {.pull(12);}
+.pull-11 {.pull(11);}
+.pull-10 {.pull(10);}
+.pull-9  {.pull(9);}
+.pull-8  {.pull(8);}
+.pull-7  {.pull(7);}
+.pull-6  {.pull(6);}
+.pull-5  {.pull(5);}
+.pull-4  {.pull(4);}
+.pull-3  {.pull(3);}
+.pull-2  {.pull(2);}
+.pull-1  {.pull(1);}
+
 // --------------------------------------------------------------------------------------------------------------------- home page styles
 
 @spotlightHeight: 300px;
